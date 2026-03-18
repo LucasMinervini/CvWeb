@@ -1,0 +1,172 @@
+/* ============================================
+   Sección de Beneficios
+   ============================================ */
+.benefits {
+    padding: var(--spacing-2xl) 0;
+    /* Sin background sólido - deja que se vea la imagen del animated-background */
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Overlay muy sutil para permitir que la imagen del fondo se vea */
+    background: 
+        linear-gradient(135deg, rgba(13, 40, 24, 0.15) 0%, rgba(10, 15, 11, 0.2) 50%, rgba(13, 40, 24, 0.15) 100%),
+        radial-gradient(ellipse at 30% 30%, rgba(82, 183, 136, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(26, 77, 46, 0.1) 0%, transparent 60%);
+    opacity: 0.6;
+    z-index: 0;
+    animation: heroOverlayPulse 15s ease-in-out infinite;
+    will-change: opacity, transform;
+    /* Sin backdrop-filter para que la imagen se vea claramente */
+}
+
+.benefits::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(82, 183, 136, 0.2) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(82, 183, 136, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 50% 20%, rgba(82, 183, 136, 0.15) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 0%, rgba(82, 183, 136, 0.05) 50%, transparent 100%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(82,183,136,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    pointer-events: none;
+    animation: heroGlow 12s ease-in-out infinite;
+    will-change: opacity, transform;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    opacity: 0.3;
+}
+
+@keyframes benefitsPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes benefitsWave {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    position: relative;
+    z-index: 2;
+}
+
+.benefit__card {
+    background: rgba(13, 40, 24, 0.82);
+    backdrop-filter: blur(6px);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    border: 1px solid rgba(82, 183, 136, 0.35);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefit__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+    box-shadow: 0 0 20px rgba(82, 183, 136, 0.5);
+}
+
+.benefit__card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(82, 183, 136, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    animation: cardGlow 4s ease-in-out infinite;
+}
+
+.benefit__card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(82, 183, 136, 0.6);
+    box-shadow: 
+        0 10px 30px rgba(82, 183, 136, 0.3),
+        0 0 40px rgba(82, 183, 136, 0.15),
+        inset 0 0 30px rgba(82, 183, 136, 0.05);
+}
+
+.benefit__card:hover::before {
+    transform: scaleX(1);
+    box-shadow: 0 0 25px rgba(82, 183, 136, 0.7);
+}
+
+.benefit__card:hover::after {
+    opacity: 1;
+    animation: cardGlow 2s ease-in-out infinite;
+}
+
+@keyframes cardGlow {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+        opacity: 0.6;
+    }
+}
+
+.benefit__icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.benefit__title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit__description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+

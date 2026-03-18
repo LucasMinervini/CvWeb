@@ -1,0 +1,500 @@
+/* ============================================
+   Animated Background
+   ============================================ */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: var(--color-dark);
+}
+
+.animated-background__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Utils/background/perro\ y\ gato.jpeg');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+    z-index: 1;
+    animation: backgroundZoom 20s ease-in-out infinite alternate;
+    filter: brightness(0.85) contrast(1.1) saturate(1.2);
+    will-change: transform, filter;
+}
+
+@keyframes backgroundZoom {
+    0% {
+        transform: scale(1) translate(0, 0);
+        filter: brightness(0.85) contrast(1.1) saturate(1.2) hue-rotate(0deg);
+    }
+    50% {
+        transform: scale(1.05) translate(-1%, 1%);
+        filter: brightness(0.9) contrast(1.15) saturate(1.3) hue-rotate(2deg);
+    }
+    100% {
+        transform: scale(1.02) translate(1%, -1%);
+        filter: brightness(0.88) contrast(1.12) saturate(1.25) hue-rotate(-2deg);
+    }
+}
+
+/* Overlay completamente transparente para que se vea la imagen al 100% */
+.animated-background__image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    opacity: 0;
+    z-index: 1;
+    animation: none;
+}
+
+@keyframes overlayPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.95;
+    }
+}
+
+/* Efecto de luz dinámica sobre la imagen */
+.animated-background__image::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(
+            circle at 30% 40%,
+            rgba(82, 183, 136, 0.15) 0%,
+            rgba(82, 183, 136, 0.05) 30%,
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 70% 60%,
+            rgba(82, 183, 136, 0.12) 0%,
+            rgba(82, 183, 136, 0.04) 25%,
+            transparent 55%
+        );
+    z-index: 1;
+    animation: lightMove 25s ease-in-out infinite;
+    mix-blend-mode: screen;
+    will-change: transform, opacity;
+    pointer-events: none;
+}
+
+@keyframes lightMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    25% {
+        transform: translate(5%, -3%) scale(1.1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-3%, 5%) scale(0.95);
+        opacity: 0.9;
+    }
+    75% {
+        transform: translate(4%, 2%) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Efecto de brillo deslizante sobre la imagen */
+.animated-background__shine {
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(82, 183, 136, 0.12) 48%,
+        rgba(82, 183, 136, 0.2) 50%,
+        rgba(82, 183, 136, 0.12) 52%,
+        transparent 60%,
+        transparent 100%
+    );
+    animation: shineSweep 10s ease-in-out infinite;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    will-change: transform;
+}
+
+@keyframes shineSweep {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg) translateX(-150%) translateY(-150%);
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg) translateX(150%) translateY(150%);
+        opacity: 0;
+    }
+}
+
+.animated-background__pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pawPattern" x="0" y="0" width="300" height="300" patternUnits="userSpaceOnUse"><g opacity="0.3"><circle cx="60" cy="60" r="10" fill="rgba(82,183,136,0.08)" /><circle cx="90" cy="60" r="10" fill="rgba(82,183,136,0.08)" /><ellipse cx="75" cy="85" rx="15" ry="18" fill="rgba(82,183,136,0.08)" /><circle cx="60" cy="60" r="5" fill="rgba(82,183,136,0.12)" /><circle cx="90" cy="60" r="5" fill="rgba(82,183,136,0.12)" /><ellipse cx="75" cy="85" rx="8" ry="10" fill="rgba(82,183,136,0.12)" /></g><g opacity="0.15" transform="translate(150,150)"><circle cx="60" cy="60" r="10" fill="rgba(82,183,136,0.08)" /><circle cx="90" cy="60" r="10" fill="rgba(82,183,136,0.08)" /><ellipse cx="75" cy="85" rx="15" ry="18" fill="rgba(82,183,136,0.08)" /><circle cx="60" cy="60" r="5" fill="rgba(82,183,136,0.12)" /><circle cx="90" cy="60" r="5" fill="rgba(82,183,136,0.12)" /><ellipse cx="75" cy="85" rx="8" ry="10" fill="rgba(82,183,136,0.12)" /></g></pattern></defs><rect width="100%" height="100%" fill="url(%23pawPattern)" /></svg>');
+    background-size: 600px 600px;
+    background-position: 0 0;
+    opacity: 0.3;
+    z-index: 2;
+    animation: patternMove 50s linear infinite;
+    mix-blend-mode: overlay;
+    will-change: background-position, transform;
+    filter: brightness(1.1);
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        background-position: 150px 150px;
+        transform: translate(-5px, -5px);
+    }
+    50% {
+        background-position: 300px 300px;
+        transform: translate(5px, 5px);
+    }
+    75% {
+        background-position: 450px 450px;
+        transform: translate(-3px, 3px);
+    }
+    100% {
+        background-position: 600px 600px;
+        transform: translate(0, 0);
+    }
+}
+
+.animated-background__gradient {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(82, 183, 136, 0.3) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(26, 77, 46, 0.35) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(13, 40, 24, 0.4) 0%,
+            transparent 65%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(82, 183, 136, 0.25) 0%,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(82, 183, 136, 0.2) 0%,
+            transparent 35%
+        );
+    animation: gradientMove 25s ease-in-out infinite;
+    will-change: transform;
+    filter: blur(60px);
+    z-index: 2;
+}
+
+.animated-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(
+            45deg,
+            transparent 30%,
+            rgba(82, 183, 136, 0.03) 50%,
+            transparent 70%
+        );
+    animation: waveMove 15s linear infinite;
+    will-change: transform;
+    z-index: 3;
+}
+
+.animated-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(
+            ellipse at center,
+            rgba(82, 183, 136, 0.05) 0%,
+            transparent 70%
+        );
+    animation: pulseBackground 8s ease-in-out infinite;
+    will-change: opacity, transform;
+    z-index: 4;
+}
+
+@keyframes waveMove {
+    0% {
+        transform: translateX(-100%) translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(-100%) rotate(360deg);
+    }
+}
+
+@keyframes pulseBackground {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(8%, 8%) rotate(5deg) scale(1.08);
+    }
+    50% {
+        transform: translate(-6%, -6%) rotate(-4deg) scale(0.95);
+    }
+    75% {
+        transform: translate(5%, -5%) rotate(3deg) scale(1.05);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+.animated-background__particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animated-background__gradient {
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(82, 183, 136, 0.7);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 15px rgba(82, 183, 136, 0.6),
+        0 0 30px rgba(82, 183, 136, 0.3),
+        inset 0 0 10px rgba(82, 183, 136, 0.4);
+    animation: float 12s infinite ease-in-out;
+    will-change: transform, opacity;
+    filter: blur(0.5px);
+}
+
+.particle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(82, 183, 136, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: particlePulse 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes particlePulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.particle:nth-child(2) {
+    left: 30%;
+    top: 60%;
+    animation-delay: 2s;
+    animation-duration: 20s;
+}
+
+.particle:nth-child(3) {
+    left: 60%;
+    top: 10%;
+    animation-delay: 4s;
+    animation-duration: 16s;
+}
+
+.particle:nth-child(4) {
+    left: 80%;
+    top: 50%;
+    animation-delay: 6s;
+    animation-duration: 22s;
+}
+
+.particle:nth-child(5) {
+    left: 20%;
+    top: 80%;
+    animation-delay: 8s;
+    animation-duration: 19s;
+}
+
+.particle:nth-child(6) {
+    left: 70%;
+    top: 30%;
+    animation-delay: 10s;
+    animation-duration: 17s;
+}
+
+.particle:nth-child(7) {
+    left: 45%;
+    top: 15%;
+    animation-delay: 1s;
+    animation-duration: 14s;
+}
+
+.particle:nth-child(8) {
+    left: 15%;
+    top: 50%;
+    animation-delay: 3s;
+    animation-duration: 19s;
+}
+
+.particle:nth-child(9) {
+    left: 85%;
+    top: 75%;
+    animation-delay: 5s;
+    animation-duration: 16s;
+}
+
+.particle:nth-child(10) {
+    left: 55%;
+    top: 90%;
+    animation-delay: 7s;
+    animation-duration: 21s;
+}
+
+.particle:nth-child(11) {
+    left: 35%;
+    top: 40%;
+    animation-delay: 1.5s;
+    animation-duration: 19s;
+}
+
+.particle:nth-child(12) {
+    left: 65%;
+    top: 65%;
+    animation-delay: 4.5s;
+    animation-duration: 17s;
+}
+
+.particle:nth-child(13) {
+    left: 25%;
+    top: 70%;
+    animation-delay: 6.5s;
+    animation-duration: 20s;
+}
+
+.particle:nth-child(14) {
+    left: 75%;
+    top: 25%;
+    animation-delay: 2.5s;
+    animation-duration: 18s;
+}
+
+.particle:nth-child(15) {
+    left: 50%;
+    top: 55%;
+    animation-delay: 5.5s;
+    animation-duration: 16s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+    20% {
+        transform: translate(60px, -70px) scale(1.4) rotate(90deg);
+        opacity: 0.9;
+    }
+    40% {
+        transform: translate(-50px, -100px) scale(0.8) rotate(180deg);
+        opacity: 0.7;
+    }
+    60% {
+        transform: translate(80px, -60px) scale(1.3) rotate(270deg);
+        opacity: 1;
+    }
+    80% {
+        transform: translate(-40px, -90px) scale(1.1) rotate(360deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+

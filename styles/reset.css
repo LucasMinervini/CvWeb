@@ -1,0 +1,86 @@
+/* ============================================
+   Reset y Base
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-base);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+main {
+    position: relative;
+    z-index: 2;
+    padding-top: 80px; /* Compensar altura del header fijo */
+}
+
+/* ============================================
+   Scroll Reveal Animation for Images
+   ============================================ */
+.scroll-reveal-img {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal-img.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delay for multiple images */
+.scroll-reveal-img.revealed:nth-child(1) { transition-delay: 0s; }
+.scroll-reveal-img.revealed:nth-child(2) { transition-delay: 0.1s; }
+.scroll-reveal-img.revealed:nth-child(3) { transition-delay: 0.2s; }
+.scroll-reveal-img.revealed:nth-child(4) { transition-delay: 0.3s; }
+.scroll-reveal-img.revealed:nth-child(5) { transition-delay: 0.4s; }
+.scroll-reveal-img.revealed:nth-child(6) { transition-delay: 0.5s; }
+.scroll-reveal-img.revealed:nth-child(n+7) { transition-delay: 0.6s; }
+
+/* ============================================
+   Lazy Loading para Imágenes
+   ============================================ */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
