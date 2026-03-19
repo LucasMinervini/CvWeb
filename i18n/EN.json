@@ -52,13 +52,13 @@
     "badge": "Premium Catalog",
     "title": "Our Signature Collection",
     "subtitle": "Explore our full range of essentials designed for the modern pet",
-    "buyButton": "Shop on Mercado Libre",
-    "discoverButton": "Discover Collection",
-    "viewMeasures": "Size Guide",
-    "customizeKit": "Customize Kit",
-    "chooseModel": "Select Model",
-    "viewCollection": "View Collection",
-    "exploreLine": "Explore Line",
+    "buyButton": "COMPRAR",
+    "discoverButton": "COMPRAR",
+    "viewMeasures": "COMPRAR",
+    "customizeKit": "COMPRAR",
+    "chooseModel": "COMPRAR",
+    "viewCollection": "COMPRAR",
+    "exploreLine": "COMPRAR",
     "items": {
       "leashBlack": {
         "name": "Premium Retractable Leash - Midnight Edition",
@@ -300,3 +300,6 @@
     "carrierView6": "Detailed feature view"
   }
 }
+
+
+

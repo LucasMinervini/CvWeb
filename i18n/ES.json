@@ -52,13 +52,13 @@
     "badge": "Catálogo Premium",
     "title": "Nuestros Productos",
     "subtitle": "Descubre nuestra línea completa de productos diseñados para el cuidado de tu mascota",
-    "buyButton": "¡Comprar en Mercado Libre!",
-    "discoverButton": "Descubrir línea",
-    "viewMeasures": "Ver medidas",
-    "customizeKit": "Personalizar kit",
-    "chooseModel": "Elegir modelo",
-    "viewCollection": "Ver colección",
-    "exploreLine": "Explorar línea",
+    "buyButton": "COMPRAR",
+    "discoverButton": "COMPRAR",
+    "viewMeasures": "COMPRAR",
+    "customizeKit": "COMPRAR",
+    "chooseModel": "COMPRAR",
+    "viewCollection": "COMPRAR",
+    "exploreLine": "COMPRAR",
     "items": {
       "leashBlack": {
         "name": "Correa Retráctil Premium - Negra",
@@ -300,4 +300,8 @@
     "carrierView6": "Vista de detalles"
   }
 }
+
+
+
+
 

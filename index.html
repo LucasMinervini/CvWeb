@@ -20,7 +20,7 @@
     <meta property="twitter:image" content="https://www.argospack.com/Utils/hero/hero-main.jpg">
 
     <title>ARGO'S PACK - Productos Premium para Mascotas</title>
-    
+    <link rel="shortcut icon" href="https://www.argospack.com/Utils/branding/logo-header.png" type="image/png">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -77,19 +77,19 @@
             </div>
             <ul class="nav__menu" id="nav-menu">
                 <li class="nav__item">
-                    <a href="#inicio" class="nav__link" data-i18n="nav.home">🏠 Inicio</a>
+                    <a href="#inicio" class="nav__link" data-i18n="nav.home">?? Inicio</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#productos" class="nav__link" data-i18n="nav.products">🦴 Productos</a>
+                    <a href="#productos" class="nav__link" data-i18n="nav.products">?? Productos</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#beneficios" class="nav__link" data-i18n="nav.benefits">✨ Beneficios</a>
+                    <a href="#beneficios" class="nav__link" data-i18n="nav.benefits">? Beneficios</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#testimonios" class="nav__link" data-i18n="nav.testimonials">💬 Testimonios</a>
+                    <a href="#testimonios" class="nav__link" data-i18n="nav.testimonials">?? Testimonios</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#contact-us" class="nav__link" data-i18n="nav.contact">📞 Contacto</a>
+                    <a href="#contact-us" class="nav__link" data-i18n="nav.contact">?? Contacto</a>
                 </li>
             </ul>
             <div class="nav__language">
@@ -136,35 +136,47 @@
 
         <!-- Sección de Beneficios -->
         <section class="benefits" id="beneficios">
-            <div class="container">
+            <div class="container benefits__container">
                 <div class="section__header">
-                    <span class="section__badge" data-i18n="benefits.badge">🐶 Nuestros Valores</span>
-                    <h2 class="section__title" data-i18n="benefits.title">¿Por qué elegir ARGO'S PACK? 🐾</h2>
+                    <span class="section__badge" data-i18n="benefits.badge">?? Nuestros Valores</span>
+                    <h2 class="section__title" data-i18n="benefits.title">¿Por qué elegir ARGO'S PACK? ??</h2>
                 </div>
                 <div class="benefits__grid">
                     <article class="benefit__card">
-                        <div class="benefit__icon">🐾</div>
+                        <div class="benefit__media">
+                            <img src="Utils/products/feeders.jpg" alt="Productos premium seleccionados de ARGO'S PACK" class="benefit__image" loading="lazy">
+                            <div class="benefit__icon" aria-hidden="true">✦</div>
+                        </div>
                         <h3 class="benefit__title" data-i18n="benefits.quality.title">Calidad Premium</h3>
                         <p class="benefit__description" data-i18n="benefits.quality.description">
                             Productos seleccionados y probados para garantizar la máxima calidad y durabilidad.
                         </p>
                     </article>
                     <article class="benefit__card">
-                        <div class="benefit__icon">❤️</div>
+                        <div class="benefit__media">
+                            <img src="Utils/hero/hero-main.jpg" alt="Mascota feliz acompañada por ARGO'S PACK" class="benefit__image" loading="lazy">
+                            <div class="benefit__icon" aria-hidden="true">❤</div>
+                        </div>
                         <h3 class="benefit__title" data-i18n="benefits.love.title">Hecho con Amor</h3>
                         <p class="benefit__description" data-i18n="benefits.love.description">
                             Cada producto está diseñado pensando en el bienestar y la felicidad de tu mascota.
                         </p>
                     </article>
                     <article class="benefit__card">
-                        <div class="benefit__icon">✨</div>
+                        <div class="benefit__media">
+                            <img src="Utils/more-products/toys.jpg" alt="Soluciones innovadoras para mascotas" class="benefit__image" loading="lazy">
+                            <div class="benefit__icon" aria-hidden="true">?</div>
+                        </div>
                         <h3 class="benefit__title" data-i18n="benefits.innovation.title">Innovación</h3>
                         <p class="benefit__description" data-i18n="benefits.innovation.description">
                             Incorporamos las últimas tendencias y tecnologías en productos para mascotas.
                         </p>
                     </article>
                     <article class="benefit__card">
-                        <div class="benefit__icon">🛡️</div>
+                        <div class="benefit__media">
+                            <img src="Utils/products/leash-black.jpg" alt="Accesorios seguros para el cuidado de tu mascota" class="benefit__image" loading="lazy">
+                            <div class="benefit__icon" aria-hidden="true">?</div>
+                        </div>
                         <h3 class="benefit__title" data-i18n="benefits.safety.title">Seguridad</h3>
                         <p class="benefit__description" data-i18n="benefits.safety.description">
                             Todos nuestros productos cumplen con los más altos estándares de seguridad y calidad.
@@ -185,7 +197,7 @@
                 
                 <div class="products__grid">
                     <!-- Product 1: Retractable Leash Black & Lime Green -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--collapsible" data-product-id="leash-black" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Correa Retráctil Premium - Negra">
                         <meta itemprop="description" content="Diseño ergonómico con acentos verde lima vibrantes para paseos cómodos y seguros.">
                         <div class="category-card__media">
@@ -193,14 +205,8 @@
                             <span class="category-card__chip">Premium</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Walk Pro</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 24.99
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.leashBlack.name">Correa Retráctil Premium - Negra</h3>
+                            
                             <p class="category-card__subtitle" data-i18n="products.items.leashBlack.subtitle">Diseño ergonómico con acentos verde lima vibrantes para paseos cómodos y seguros.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.leashBlack.features.0">Diseño ergonómico con mango cómodo</li>
@@ -210,13 +216,13 @@
                                 <li data-i18n="products.items.leashBlack.features.4">Gancho metálico resistente</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Product 2: Retractable Leash White & Lavender -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--collapsible" data-product-id="leash-white" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Correa Retráctil Premium - Blanca">
                         <meta itemprop="description" content="Diseño moderno en blanco y lavanda con estilo elegante y funcional.">
                         <div class="category-card__media">
@@ -224,14 +230,8 @@
                             <span class="category-card__chip">Elegant</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Walk Pro</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 22.99
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.leashWhite.name">Correa Retráctil Premium - Blanca</h3>
+                            
                             <p class="category-card__subtitle" data-i18n="products.items.leashWhite.subtitle">Diseño moderno en blanco y lavanda con estilo elegante y funcional.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.leashWhite.features.0">Diseño moderno en blanco y lavanda</li>
@@ -241,13 +241,13 @@
                                 <li data-i18n="products.items.leashWhite.features.4">Estilo elegante y funcional</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Product 2b: Correa Doble Premium -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--collapsible" data-product-id="double-leash" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Correa Doble Premium">
                         <meta itemprop="description" content="Correa doble para pasear a dos mascotas con total control y comodidad.">
                         <div class="category-card__media">
@@ -255,14 +255,8 @@
                             <span class="category-card__chip">Dual Walk</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Walk Pro</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 27.99
-                            </div>
                             <h3 class="category-card__title">Correa Doble Premium</h3>
+                            
                             <p class="category-card__subtitle">
                                 Diseñada para pasear a dos perros al mismo tiempo, con giro anti enredo y agarre ergonómico.
                             </p>
@@ -273,13 +267,13 @@
                                 <li>Ideal para paseos urbanos diarios</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Product 2c: Correa Simple Premium -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--collapsible" data-product-id="simple-leash" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Correa Simple Premium">
                         <meta itemprop="description" content="Correa clásica de una sola sujeción, resistente y cómoda para el uso diario.">
                         <div class="category-card__media">
@@ -287,14 +281,8 @@
                             <span class="category-card__chip">Daily Walk</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Walk Pro</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 18.99
-                            </div>
                             <h3 class="category-card__title">Correa Simple Premium</h3>
+                            
                             <p class="category-card__subtitle">
                                 Ideal para paseos cotidianos, con cinta resistente y gancho metálico reforzado.
                             </p>
@@ -305,253 +293,225 @@
                                 <li>Diseño pensado para uso diario</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Product 2d: Peine Removedor de Pelo -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--collapsible" data-product-id="grooming-comb" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Peine Removedor de Pelo">
-                        <meta itemprop="description" content="Peine especializado para remover pelo suelto y subpelo sin dañar la piel.">
+                        <meta itemprop="description" content="Peine especializado para remover pelo suelto y subpelo sin da&#241;ar la piel.">
                         <div class="category-card__media">
-                            <img itemprop="image" src="Hair%20removal%20pet%20comb/1.jpg" alt="Peine removedor de pelo ARGO'S PACK" loading="lazy">
-                            <span class="category-card__chip">Grooming</span>
+                            <span class="category-card__chip">SOFT TOUCH</span>
+                            <div class="category-card__visual">
+                                <img itemprop="image" src="Hair%20removal%20pet%20comb/1.jpg" alt="Peine removedor de pelo ARGO'S PACK" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Grooming Lab</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 16.99
-                            </div>
                             <h3 class="category-card__title">Peine Removedor de Pelo</h3>
                             <p class="category-card__subtitle">
-                                Ayuda a reducir la caída de pelo y mantener el manto suave y sano.
+                                Ayuda a reducir la ca&#237;da de pelo y mantener el manto suave y sano.
                             </p>
                             <ul class="category-card__features">
-                                <li>Púas diseñadas para cuidar la piel</li>
-                                <li>Reduce la caída de pelo en el hogar</li>
+                                <li>P&#250;as dise&#241;adas para cuidar la piel</li>
+                                <li>Reduce la ca&#237;da de pelo en el hogar</li>
                                 <li>Ideal para pelo medio y largo</li>
-                                <li>Mango ergonómico y antideslizante</li>
+                                <li>Mango ergon&#243;mico y antideslizante</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
-                    <!-- Product 2e: Pet Cup - Bebedero Portátil -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Pet Cup - Bebedero Portátil">
-                        <meta itemprop="description" content="Botella-bebedero portátil para hidratar a tu mascota en cualquier lugar.">
+                    <!-- Product 2e: Pet Cup - Bebedero Portatil -->
+                    <article class="product__card category-card category-card--collapsible" data-product-id="pet-cup" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Pet Cup - Bebedero Portatil">
+                        <meta itemprop="description" content="Botella-bebedero portatil para hidratar a tu mascota en cualquier lugar.">
                         <div class="category-card__media">
-                            <img itemprop="image" src="Pet%20Cup/1.1.jpg" alt="Pet Cup ARGO'S PACK - Bebedero portátil" loading="lazy">
-                            <span class="category-card__chip">On the Go</span>
+                            <span class="category-card__chip">PRO KITS</span>
+                            <div class="category-card__visual">
+                                <img itemprop="image" src="Pet%20Cup/1.1.jpg" alt="Pet Cup ARGO'S PACK - Bebedero portatil" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Travel Lab</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 19.99
-                            </div>
-                            <h3 class="category-card__title">Pet Cup - Bebedero Portátil</h3>
+                            <h3 class="category-card__title">Pet Cup - Bebedero Portatil</h3>
                             <p class="category-card__subtitle">
                                 Perfecta para paseos, viajes y salidas al parque, evitando desperdicio de agua.
                             </p>
                             <ul class="category-card__features">
-                                <li>Diseño 2 en 1: botella y bebedero</li>
+                                <li>Dise&#241;o 2 en 1: botella y bebedero</li>
                                 <li>Sistema antiderrame y bloqueo</li>
-                                <li>Fácil de transportar en la mano o mochila</li>
+                                <li>Facil de transportar en la mano o mochila</li>
                                 <li>Materiales seguros para uso alimenticio</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Product 2f: Pinza Quitagarrapatas -->
-                    <article class="product__card category-card category-card--collapsible" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--collapsible" data-product-id="tick-tweezers" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Pinza Quitagarrapatas">
-                        <meta itemprop="description" content="Herramienta específica para extraer garrapatas de forma segura.">
+                        <meta itemprop="description" content="Herramienta especifica para extraer garrapatas de forma segura.">
                         <div class="category-card__media">
-                            <img itemprop="image" src="Pet%20tick%20tweezers/1.1.jpg" alt="Pinza quitagarrapatas ARGO'S PACK" loading="lazy">
-                            <span class="category-card__chip">Safe Care</span>
+                            <span class="category-card__chip">SAFE CARE</span>
+                            <div class="category-card__visual">
+                                <img itemprop="image" src="Pet%20tick%20tweezers/1.1.jpg" alt="Pinza quitagarrapatas ARGO'S PACK" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Safety Lab</span>
-                            </div>
-                            <div class="category-card__price">
-                                <span>US$</span> 9.99
-                            </div>
                             <h3 class="category-card__title">Pinza Quitagarrapatas</h3>
                             <p class="category-card__subtitle">
-                                Diseñada para retirar garrapatas evitando que queden restos en la piel de tu mascota.
+                                Dise&#241;ada para retirar garrapatas evitando que queden restos en la piel de tu mascota.
                             </p>
                             <ul class="category-card__features">
-                                <li>Punta especial para una extracción precisa</li>
+                                <li>Punta especial para una extraccion precisa</li>
                                 <li>Ayuda a reducir el riesgo de infecciones</li>
-                                <li>Tamaño compacto y fácil de guardar</li>
-                                <li>Ideal para botiquín de primeros auxilios</li>
+                                <li>Tama&#241;o compacto y facil de guardar</li>
+                                <li>Ideal para botiquin de primeros auxilios</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Juguetes Interactivos -->
-                    <article class="product__card category-card category-card--toys" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--toys" data-product-id="interactive-toys" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Juguetes Interactivos">
-                        <meta itemprop="description" content="Colección multisensorial para retar su inteligencia y liberar energía.">
+                        <meta itemprop="description" content="Colecci&#243;n multisensorial para retar su inteligencia y liberar energ&#237;a.">
                         <div class="category-card__media">
-                            <img itemprop="image" src="Utils/more-products/toys.jpg" alt="Producto ARGO'S PACK - Juguetes Interactivos" loading="lazy">
-                            <span class="category-card__chip">Sensory Pack</span>
+                            <span class="category-card__chip">SENSORY PACK</span>
+                            <div class="category-card__visual">
+                                <img itemprop="image" src="Utils/more-products/toys.jpg" alt="Producto ARGO'S PACK - Juguetes Interactivos" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Edición Premium</span>
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.toys.name">Juguetes Interactivos</h3>
-                            <p class="category-card__subtitle" data-i18n="products.items.toys.subtitle">Colección multisensorial para retar su inteligencia y liberar energía.</p>
+                            <p class="category-card__subtitle" data-i18n="products.items.toys.subtitle">Colecci&#243;n multisensorial para retar su inteligencia y liberar energ&#237;a.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.toys.features.0">Texturas y sonidos enriquecidos</li>
                                 <li data-i18n="products.items.toys.features.1">Materiales seguros y lavables</li>
                                 <li data-i18n="products.items.toys.features.2">Pack con 3 niveles de dificultad</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.discoverButton">
-                                Descubrir línea
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Camas Premium -->
-                    <article class="product__card category-card category-card--beds" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--beds" data-product-id="premium-beds" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Camas Premium">
-                        <meta itemprop="description" content="Descanso ortopédico con soporte envolvente y telas respirables.">
+                        <meta itemprop="description" content="Descanso ortopedico con soporte envolvente y telas respirables.">
                         <div class="category-card__media">
-                            <img itemprop="image" src="Utils/more-products/beds.jpg" alt="Producto ARGO'S PACK - Camas Premium" loading="lazy">
-                            <span class="category-card__chip">Soft Touch</span>
+                            <span class="category-card__chip">SOFT TOUCH</span>
+                            <div class="category-card__visual">
+                                <img itemprop="image" src="Utils/more-products/beds.jpg" alt="Producto ARGO'S PACK - Camas Premium" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Comfort Lab</span>
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.beds.name">Camas Premium</h3>
-                            <p class="category-card__subtitle" data-i18n="products.items.beds.subtitle">Descanso ortopédico con soporte envolvente y telas respirables.</p>
+                            <p class="category-card__subtitle" data-i18n="products.items.beds.subtitle">Descanso ortopedico con soporte envolvente y telas respirables.</p>
                             <ul class="category-card__features">
-                                <li data-i18n="products.items.beds.features.0">Espuma memory viscoelástica</li>
+                                <li data-i18n="products.items.beds.features.0">Espuma memory viscoelastica</li>
                                 <li data-i18n="products.items.beds.features.1">Fundas removibles anti manchas</li>
                                 <li data-i18n="products.items.beds.features.2">Bordes reforzados y antidesgarro</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.viewMeasures">
-                                Ver medidas
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Accesorios de Entrenamiento -->
-                    <article class="product__card category-card category-card--training" itemscope itemtype="https://schema.org/Product">
+                    <article class="product__card category-card category-card--training" data-product-id="training-accessories" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Accesorios de Entrenamiento">
                         <meta itemprop="description" content="Herramientas positivas para rutinas urbanas y sesiones guiadas.">
                         <div class="category-card__media">
-                            <img itemprop="image" src="Utils/more-products/training.jpg" alt="Producto ARGO'S PACK - Accesorios de Entrenamiento" loading="lazy">
-                            <span class="category-card__chip">Pro Kits</span>
+                            <span class="category-card__chip">PRO KITS</span>
+                            <div class="category-card__visual category-card__visual--light">
+                                <img itemprop="image" src="Utils/more-products/training.jpg" alt="Producto ARGO'S PACK - Accesorios de Entrenamiento" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span itemprop="name">Behavior Lab</span>
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.training.name">Accesorios de Entrenamiento</h3>
                             <p class="category-card__subtitle" data-i18n="products.items.training.subtitle">Herramientas positivas para rutinas urbanas y sesiones guiadas.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.training.features.0">Clickers y arneses regulables</li>
                                 <li data-i18n="products.items.training.features.1">Materiales pro antideslizantes</li>
-                                <li data-i18n="products.items.training.features.2">Guía digital con rutinas</li>
+                                <li data-i18n="products.items.training.features.2">Guia digital con rutinas</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.customizeKit">
-                                Personalizar kit
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Comedores Premium -->
-                    <article class="product__card category-card category-card--feeders">
+                    <article class="product__card category-card category-card--feeders" data-product-id="premium-feeders">
                         <div class="category-card__media">
-                            <img src="Utils/products/feeders.jpg" alt="Producto ARGO'S PACK - Comedores Premium" loading="lazy">
-                            <span class="category-card__chip">Healthy Flow</span>
+                            <span class="category-card__chip">HEALTHY FLOW</span>
+                            <div class="category-card__visual category-card__visual--light">
+                                <img src="Utils/products/feeders.jpg" alt="Producto ARGO'S PACK - Comedores Premium" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Nutrition Care</span>
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.feeders.name">Comedores Premium</h3>
-                            <p class="category-card__subtitle" data-i18n="products.items.feeders.subtitle">Set ergonómico con bowls elevados y acabados fáciles de limpiar.</p>
+                            <p class="category-card__subtitle" data-i18n="products.items.feeders.subtitle">Set ergonomico con bowls elevados y acabados faciles de limpiar.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.feeders.features.0">Alturas ajustadas por talla</li>
-                                <li data-i18n="products.items.feeders.features.1">Bases antideslizantes 360°</li>
-                                <li data-i18n="products.items.feeders.features.2">Doble bowl en acero quirúrgico</li>
+                                <li data-i18n="products.items.feeders.features.1">Bases antideslizantes 360&deg;</li>
+                                <li data-i18n="products.items.feeders.features.2">Doble bowl en acero quirurgico</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.chooseModel">
-                                Elegir modelo
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Ropa y Accesorios -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="pet-clothing">
                         <div class="category-card__media">
-                            <img src="Utils/products/clothing.jpg" alt="Producto ARGO'S PACK - Ropa y Accesorios" loading="lazy">
-                            <span class="category-card__chip">Style Pack</span>
+                            <span class="category-card__chip">STYLE PACK</span>
+                            <div class="category-card__visual">
+                                <img src="Utils/products/clothing.jpg" alt="Producto ARGO'S PACK - Ropa y Accesorios" loading="lazy">
+                            </div>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Fashion Lab</span>
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.clothing.name">Ropa y Accesorios</h3>
-                            <p class="category-card__subtitle" data-i18n="products.items.clothing.subtitle">Diseños modernos y cómodos para todas las ocasiones.</p>
+                            <p class="category-card__subtitle" data-i18n="products.items.clothing.subtitle">Dise&#241;os modernos y comodos para todas las ocasiones.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.clothing.features.0">Telas de calidad premium</li>
-                                <li data-i18n="products.items.clothing.features.1">Diseños modernos y funcionales</li>
+                                <li data-i18n="products.items.clothing.features.1">Dise&#241;os modernos y funcionales</li>
                                 <li data-i18n="products.items.clothing.features.2">Variedad de tallas disponibles</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.viewCollection">
-                                Ver colección
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Higiene y Cuidado -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="hygiene-care">
                         <div class="category-card__media">
                             <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Higiene y Cuidado" loading="lazy">
                             <span class="category-card__chip">Pure Care</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Wellness Lab</span>
-                            </div>
                             <h3 class="category-card__title" data-i18n="products.items.hygiene.name">Higiene y Cuidado</h3>
+                            
                             <p class="category-card__subtitle" data-i18n="products.items.hygiene.subtitle">Productos naturales para el cuidado y bienestar de tu mascota.</p>
                             <ul class="category-card__features">
                                 <li data-i18n="products.items.hygiene.features.0">Productos naturales y seguros</li>
                                 <li data-i18n="products.items.hygiene.features.1">Suaves con la piel sensible</li>
                                 <li data-i18n="products.items.hygiene.features.2">Fórmulas especializadas</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.exploreLine">
-                                Explorar línea
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
+                                COMPRAR
                             </a>
                         </div>
                     </article>
@@ -598,23 +558,20 @@
                                 <li data-i18n="products.items.carrier.benefits.5">Ideal para mascotas hasta 20lbs</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 4 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="feeders-drinkers">
                         <div class="category-card__media">
                             <img src="Utils/products/feeders.jpg" alt="Producto ARGO'S PACK - Comedores y Bebederos" loading="lazy">
                             <span class="category-card__chip">Healthy Flow</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Nutrition Care</span>
-                            </div>
                             <h3 class="category-card__title">Comedores y Bebederos</h3>
+                            
                             <p class="category-card__subtitle">Set ergonómico con bowls elevados y acabados fáciles de limpiar.</p>
                             <ul class="category-card__features">
                                 <li>Materiales no tóxicos</li>
@@ -623,23 +580,20 @@
                                 <li>Diferentes capacidades</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 5 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="daily-hygiene">
                         <div class="category-card__media">
                             <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Higiene y Cuidado" loading="lazy">
                             <span class="category-card__chip">Pure Care</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Wellness Lab</span>
-                            </div>
                             <h3 class="category-card__title">Higiene y Cuidado</h3>
+                            
                             <p class="category-card__subtitle">Productos naturales para el cuidado y bienestar de tu mascota.</p>
                             <ul class="category-card__features">
                                 <li>Productos naturales</li>
@@ -648,23 +602,20 @@
                                 <li>Fórmulas especializadas</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 6 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="style-accessories">
                         <div class="category-card__media">
                             <img src="Utils/products/clothing.jpg" alt="Producto ARGO'S PACK - Ropa y Accesorios" loading="lazy">
                             <span class="category-card__chip">Style Pack</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Fashion Lab</span>
-                            </div>
                             <h3 class="category-card__title">Ropa y Accesorios</h3>
+                            
                             <p class="category-card__subtitle">Diseños modernos y cómodos para todas las ocasiones.</p>
                             <ul class="category-card__features">
                                 <li>Telas de calidad</li>
@@ -673,23 +624,20 @@
                                 <li>Confort garantizado</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 7 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="travel-gear">
                         <div class="category-card__media">
                             <img src="Utils/products/leash-white.jpg" alt="Producto ARGO'S PACK - Transporte y Viaje" loading="lazy">
                             <span class="category-card__chip">Travel Pro</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Travel Lab</span>
-                            </div>
                             <h3 class="category-card__title">Transporte y Viaje</h3>
+                            
                             <p class="category-card__subtitle">Soluciones seguras y cómodas para viajar con tu mascota.</p>
                             <ul class="category-card__features">
                                 <li>Transportadores aprobados TSA</li>
@@ -698,23 +646,20 @@
                                 <li>Múltiples tamaños disponibles</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 8 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="health-wellness">
                         <div class="category-card__media">
                             <img src="Utils/products/feeders.jpg" alt="Producto ARGO'S PACK - Salud y Bienestar" loading="lazy">
                             <span class="category-card__chip">Health Plus</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Health Lab</span>
-                            </div>
                             <h3 class="category-card__title">Salud y Bienestar</h3>
+                            
                             <p class="category-card__subtitle">Productos especializados para mantener a tu mascota saludable y feliz.</p>
                             <ul class="category-card__features">
                                 <li>Productos veterinarios aprobados</li>
@@ -723,23 +668,20 @@
                                 <li>Resultados comprobados</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 9 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="safety-protection">
                         <div class="category-card__media">
                             <img src="Utils/products/clothing.jpg" alt="Producto ARGO'S PACK - Seguridad y Protección" loading="lazy">
                             <span class="category-card__chip">Safety Pro</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Safety Lab</span>
-                            </div>
                             <h3 class="category-card__title">Seguridad y Protección</h3>
+                            
                             <p class="category-card__subtitle">Equipamiento de seguridad para proteger a tu mascota en todo momento.</p>
                             <ul class="category-card__features">
                                 <li>Arneses de seguridad certificados</li>
@@ -748,23 +690,20 @@
                                 <li>Materiales resistentes y duraderos</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 10 -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="entertainment">
                         <div class="category-card__media">
                             <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Entretenimiento" loading="lazy">
                             <span class="category-card__chip">Fun Pack</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Entertainment Lab</span>
-                            </div>
                             <h3 class="category-card__title">Entretenimiento</h3>
+                            
                             <p class="category-card__subtitle">Juguetes y actividades para mantener a tu mascota activa y entretenida.</p>
                             <ul class="category-card__features">
                                 <li>Juguetes interactivos inteligentes</li>
@@ -773,23 +712,20 @@
                                 <li>Para todas las edades y tamaños</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
 
                     <!-- Producto 11 - Grooming Lab -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" data-product-id="grooming-care">
                         <div class="category-card__media">
                             <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Aseo y Cuidado" loading="lazy">
                             <span class="category-card__chip">Grooming Pro</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
-                                <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Grooming Lab</span>
-                            </div>
                             <h3 class="category-card__title">Aseo y Cuidado</h3>
+                            
                             <p class="category-card__subtitle">Herramientas profesionales para mantener a tu mascota limpia y saludable.</p>
                             <ul class="category-card__features">
                                 <li>Kits de aseo completos</li>
@@ -798,7 +734,7 @@
                                 <li>Cuidado integral y seguro</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
@@ -832,7 +768,7 @@
                                 <li data-i18n="moreProducts.toys.benefits.3">Para todas las edades</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
@@ -849,7 +785,7 @@
                                 <li data-i18n="moreProducts.beds.benefits.3">Múltiples tamaños disponibles</li>
                             </ul>
                             <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
-                                ¡Comprar en Mercado Libre!
+                                COMPRAR
                             </a>
                         </div>
                     </article>
@@ -861,7 +797,7 @@
         <section class="contact" id="contact-us">
             <div class="container">
                 <div class="section__header">
-                    <span class="section__badge" data-i18n="contact.badge">🐾 Contáctanos</span>
+                    <span class="section__badge" data-i18n="contact.badge">?? Contáctanos</span>
                     <h2 class="section__title" data-i18n="contact.title">¿Tienes alguna consulta?</h2>
                     <p class="section__subtitle" data-i18n="contact.subtitle">Envíanos un mensaje y te responderemos a la brevedad.</p>
                 </div>
@@ -900,12 +836,12 @@
                 </div>
                 <div class="footer__links">
                     <div class="footer__section">
-                        <h4 class="footer__title" data-i18n="footer.links.title">🔗 Enlaces</h4>
+                        <h4 class="footer__title" data-i18n="footer.links.title">?? Enlaces</h4>
                         <ul class="footer__list">
-                            <li><a href="#inicio" class="footer__link" data-i18n="footer.links.home">🏠 Inicio</a></li>
-                            <li><a href="#productos" class="footer__link" data-i18n="footer.links.products">🦴 Productos</a></li>
-                            <li><a href="#beneficios" class="footer__link" data-i18n="footer.links.benefits">✨ Beneficios</a></li>
-                            <li><a href="#testimonios" class="footer__link" data-i18n="footer.links.testimonials">💬 Testimonios</a></li>
+                            <li><a href="#inicio" class="footer__link" data-i18n="footer.links.home">?? Inicio</a></li>
+                            <li><a href="#productos" class="footer__link" data-i18n="footer.links.products">?? Productos</a></li>
+                            <li><a href="#beneficios" class="footer__link" data-i18n="footer.links.benefits">? Beneficios</a></li>
+                            <li><a href="#testimonios" class="footer__link" data-i18n="footer.links.testimonials">?? Testimonios</a></li>
                         </ul>
                     </div>
                     <div class="footer__section">
@@ -917,10 +853,10 @@
                         </ul>
                     </div>
                     <div class="footer__section">
-                        <h4 class="footer__title" data-i18n="footer.legal.title">⚖️ Legal</h4>
+                        <h4 class="footer__title" data-i18n="footer.legal.title">?? Legal</h4>
                         <ul class="footer__list">
-                            <li><a href="#" class="footer__link" data-i18n="footer.legal.privacy">🛡️ Política de Privacidad</a></li>
-                            <li><a href="#" class="footer__link" data-i18n="footer.legal.terms">📜 Términos y Condiciones</a></li>
+                            <li><a href="#" class="footer__link" data-i18n="footer.legal.privacy">??? Política de Privacidad</a></li>
+                            <li><a href="#" class="footer__link" data-i18n="footer.legal.terms">?? Términos y Condiciones</a></li>
                         </ul>
                     </div>
                 </div>
@@ -957,4 +893,10 @@
     </div>
 </body>
 </html>
+
+
+
+
+
+
 
