@@ -77,6 +77,7 @@
 .products__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 708px;
     gap: 1.6rem;
     margin-top: var(--spacing-xl);
     max-width: 1180px;
@@ -90,8 +91,8 @@
 
 .products__grid .category-card {
     width: 100%;
-    min-height: 708px;
     height: 100%;
+    min-height: unset;
 }
 
 @media (min-width: 768px) {
@@ -445,9 +446,8 @@
 
 .category-card__body {
     padding: 1.35rem 1.3rem 1.3rem;
-    display: grid;
-    grid-template-rows: minmax(3rem, auto) minmax(3rem, auto) minmax(4.1rem, auto) 1fr auto;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     gap: 0.95rem;
     flex-grow: 1;
     position: relative;
@@ -496,7 +496,8 @@
     font-weight: 800;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     letter-spacing: -0.02em;
-    min-height: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
     width: min(100%, 12.8rem);
     margin-inline: auto;
     text-align: center;
@@ -513,7 +514,8 @@
     gap: 0.75rem;
     margin: 0;
     width: 100%;
-    min-height: 4rem;
+    height: 4.5rem;
+    flex-shrink: 0;
 }
 
 .category-card__price {
@@ -584,11 +586,12 @@
     text-align: center;
     width: min(100%, 13rem);
     margin-inline: auto;
+    height: 3rem;
+    flex-shrink: 0;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    align-self: start;
 }
 
 .category-card__features {
@@ -600,8 +603,9 @@
     gap: 0.62rem;
     margin-bottom: 0;
     width: min(100%, 13rem);
-    align-self: start;
-    justify-self: center;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .category-card__features li {
@@ -664,10 +668,10 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    justify-self: center;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
+    flex-shrink: 0;
     font-size: 0.74rem;
     font-weight: 800;
     padding: 0.95rem 1.25rem;
@@ -733,8 +737,8 @@
 }
 
 @media (max-width: 767px) {
-    .products__grid .category-card {
-        min-height: 620px;
+    .products__grid {
+        grid-auto-rows: 620px;
     }
 
     .category-card__media {
@@ -758,8 +762,12 @@
         min-height: 2.8rem;
     }
 
-    .category-card__body {
-        grid-template-rows: minmax(2.8rem, auto) minmax(3rem, auto) minmax(3.8rem, auto) 1fr auto;
+    .category-card__title {
+        height: 2.8rem;
+    }
+
+    .category-card__subtitle {
+        height: 2.8rem;
     }
 }
 
