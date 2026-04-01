@@ -15,8 +15,8 @@
 
         if (!lightboxImg || !lightboxClose) return;
 
-        // Select all product images that should open in the lightbox
-        const productImages = document.querySelectorAll('.product__card--gallery img, .more-products__grid img');
+        // Keep thumbnails as selectors and allow zoom only on main showcase images.
+        const productImages = document.querySelectorAll('.product__main-img, .more-products__grid img');
 
         productImages.forEach(img => {
             img.style.cursor = 'zoom-in'; // Add a visual cue

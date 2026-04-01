@@ -92,16 +92,22 @@
     aspect-ratio: 4/3;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
+    background:
+        radial-gradient(circle at top, rgba(82, 183, 136, 0.12), transparent 58%),
+        rgba(4, 34, 24, 0.92);
     border: 1px solid rgba(82, 183, 136, 0.2);
     position: relative;
     max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product__main-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: var(--spacing-md);
     transition: transform var(--transition-base);
 }
 

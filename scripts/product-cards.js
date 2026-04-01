@@ -5,95 +5,66 @@
     'use strict';
 
     var MODAL_ID = 'product-modal';
-    var MOCK_PRODUCT_PRICES = {
-        'leash-black': { currency: 'US$', amount: '24.99', source: 'mock' },
-        'leash-white': { currency: 'US$', amount: '22.99', source: 'mock' },
-        'double-leash': { currency: 'US$', amount: '27.99', source: 'mock' },
-        'simple-leash': { currency: 'US$', amount: '18.99', source: 'mock' },
-        'grooming-comb': { currency: 'US$', amount: '16.99', source: 'mock' },
-        'pet-cup': { currency: 'US$', amount: '19.99', source: 'mock' },
-        'tick-tweezers': { currency: 'US$', amount: '9.99', source: 'mock' },
-        'interactive-toys': { currency: 'US$', amount: '29.90', source: 'mock' },
-        'premium-beds': { currency: 'US$', amount: '34.50', source: 'mock' },
-        'training-accessories': { currency: 'US$', amount: '21.75', source: 'mock' },
-        'premium-feeders': { currency: 'US$', amount: '26.40', source: 'mock' },
-        'pet-clothing': { currency: 'US$', amount: '17.60', source: 'mock' },
-        'hygiene-care': { currency: 'US$', amount: '14.90', source: 'mock' },
-        'feeders-drinkers': { currency: 'US$', amount: '23.80', source: 'mock' },
-        'daily-hygiene': { currency: 'US$', amount: '12.50', source: 'mock' },
-        'style-accessories': { currency: 'US$', amount: '19.40', source: 'mock' },
-        'travel-gear': { currency: 'US$', amount: '42.90', source: 'mock' },
-        'health-wellness': { currency: 'US$', amount: '18.30', source: 'mock' },
-        'safety-protection': { currency: 'US$', amount: '25.20', source: 'mock' },
-        'entertainment': { currency: 'US$', amount: '20.10', source: 'mock' },
-        'grooming-care': { currency: 'US$', amount: '15.80', source: 'mock' }
-    };
+    var PRODUCT_PRICES = {};
 
     function getTextContent(element) {
         return element ? element.textContent.trim() : '';
     }
 
-    function getMockPrice(productId) {
-        return productId && MOCK_PRODUCT_PRICES[productId] ? MOCK_PRODUCT_PRICES[productId] : null;
-    }
-
     function getProductPrice(card) {
-        return getMockPrice(card.dataset.productId);
+        var id = card.dataset.productId;
+        return (id && PRODUCT_PRICES[id]) ? PRODUCT_PRICES[id] : null;
     }
 
     function ensureCardPrice(card) {
         var title = card.querySelector('.category-card__title');
         var subtitle = card.querySelector('.category-card__subtitle');
-        var existingPrice = card.querySelector('[data-product-price]');
         var priceData = getProductPrice(card);
-        var meta;
-        var price;
-        var prefix;
-        var value;
 
         if (!title || !subtitle || !priceData) return;
+        if (!priceData.amount || parseFloat(priceData.amount) <= 0) return;
 
-        meta = card.querySelector('.category-card__meta');
+        var meta = card.querySelector('.category-card__meta');
         if (!meta) {
             meta = document.createElement('div');
             meta.className = 'category-card__meta';
             title.insertAdjacentElement('afterend', meta);
         }
 
-        price = existingPrice;
+        var price = card.querySelector('[data-product-price]');
         if (!price) {
             price = document.createElement('p');
             price.className = 'category-card__price';
             price.setAttribute('data-product-price', '');
-            price.innerHTML = '' +
+            price.innerHTML =
                 '<span class="category-card__price-prefix" data-product-price-currency></span>' +
                 '<span class="category-card__price-value" data-product-price-amount></span>';
             meta.appendChild(price);
         }
 
-        prefix = price.querySelector('[data-product-price-currency]');
-        value = price.querySelector('[data-product-price-amount]');
+        var prefix = price.querySelector('[data-product-price-currency]');
+        var value  = price.querySelector('[data-product-price-amount]');
 
         if (prefix) prefix.textContent = priceData.currency;
-        if (value) value.textContent = priceData.amount;
+        if (value)  value.textContent  = priceData.amount;
 
-        price.dataset.priceSource = priceData.source || 'mock';
-        price.dataset.productId = card.dataset.productId || '';
+        price.dataset.priceSource = priceData.source || 'unknown';
+        price.dataset.productId   = card.dataset.productId || '';
     }
 
     function getProductData(card) {
-        var image = card.querySelector('.category-card__media img');
-        var chip = card.querySelector('.category-card__chip');
-        var title = card.querySelector('.category-card__title');
+        var image    = card.querySelector('.category-card__media img');
+        var chip     = card.querySelector('.category-card__chip');
+        var title    = card.querySelector('.category-card__title');
         var subtitle = card.querySelector('.category-card__subtitle');
         var features = card.querySelectorAll('.category-card__features li');
-        var cta = card.querySelector('.category-card__cta');
+        var cta      = card.querySelector('.category-card__cta');
 
         return {
             imageSrc: image ? image.getAttribute('src') : '',
             imageAlt: image ? image.getAttribute('alt') : '',
-            chip: getTextContent(chip),
-            title: getTextContent(title),
+            chip:     getTextContent(chip),
+            title:    getTextContent(title),
             subtitle: getTextContent(subtitle),
             features: Array.prototype.map.call(features, function (item) {
                 return item.textContent.trim();
@@ -111,7 +82,7 @@
         modal.id = MODAL_ID;
         modal.className = 'product-modal';
         modal.setAttribute('aria-hidden', 'true');
-        modal.innerHTML = '' +
+        modal.innerHTML =
             '<div class="product-modal__backdrop" data-product-modal-close></div>' +
             '<div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">' +
                 '<button type="button" class="product-modal__close" data-product-modal-close aria-label="Close product details">&times;</button>' +
@@ -134,12 +105,12 @@
     }
 
     function fillModal(modal, data) {
-        var image = modal.querySelector('.product-modal__image');
-        var chip = modal.querySelector('.product-modal__chip');
-        var title = modal.querySelector('.product-modal__title');
+        var image    = modal.querySelector('.product-modal__image');
+        var chip     = modal.querySelector('.product-modal__chip');
+        var title    = modal.querySelector('.product-modal__title');
         var subtitle = modal.querySelector('.product-modal__subtitle');
         var features = modal.querySelector('.product-modal__features');
-        var cta = modal.querySelector('.product-modal__cta');
+        var cta      = modal.querySelector('.product-modal__cta');
 
         image.src = data.imageSrc;
         image.alt = data.imageAlt || data.title;
@@ -179,7 +150,6 @@
     function closeModal() {
         var modal = document.getElementById(MODAL_ID);
         if (!modal) return;
-
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('product-modal-open');
@@ -191,10 +161,7 @@
 
         document.addEventListener('click', function (event) {
             var closeTrigger = event.target.closest('[data-product-modal-close]');
-            if (closeTrigger) {
-                closeModal();
-                return;
-            }
+            if (closeTrigger) { closeModal(); return; }
 
             if (event.target.closest('.category-card__cta')) return;
 
@@ -206,10 +173,7 @@
         });
 
         document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                closeModal();
-                return;
-            }
+            if (event.key === 'Escape') { closeModal(); return; }
 
             if (event.key !== 'Enter' && event.key !== ' ') return;
             if (event.target.closest('.category-card__cta')) return;
@@ -222,13 +186,12 @@
         });
     }
 
-    window.initProductCards = function () {
+    function renderCards() {
         var cards = document.querySelectorAll('.products__grid .category-card');
         if (!cards.length) return;
 
         cards.forEach(function (card) {
             if (card.dataset.productCardReady === 'true') return;
-
             card.dataset.productCardReady = 'true';
             ensureCardPrice(card);
             card.setAttribute('role', 'button');
@@ -238,5 +201,19 @@
 
         buildModal();
         bindModalEvents();
+    }
+
+    window.initProductCards = function () {
+        fetch('prices.json')
+            .then(function (response) {
+                return response.ok ? response.json() : {};
+            })
+            .catch(function () {
+                return {};
+            })
+            .then(function (data) {
+                PRODUCT_PRICES = data;
+                renderCards();
+            });
     };
 })();

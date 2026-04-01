@@ -1,0 +1,12 @@
+{
+    "double-leash":        { "currency": "US$", "amount": "45.00", "source": "amazon", "asin": "B0GT6RXS6J" },
+    "double-leash-sky":    { "currency": "US$", "amount": "45.00", "source": "amazon", "asin": "B0GT7RQDYM" },
+    "double-leash-khaki":  { "currency": "US$", "amount": "45.00", "source": "amazon", "asin": "B0GT734CMW" },
+    "simple-leash":        { "currency": "US$", "amount": "22.00", "source": "amazon", "asin": "B0GTS38627" },
+    "simple-leash-purple": { "currency": "US$", "amount": "22.00", "source": "amazon", "asin": "B0GTRYB3KN" },
+    "grooming-comb":       { "currency": "US$", "amount": "11.99", "source": "amazon", "asin": "B0GTWXV44T" },
+    "grooming-comb-yellow":{ "currency": "US$", "amount": "11.99", "source": "amazon", "asin": "B0GTWVN4XV" },
+    "pet-cup":             { "currency": "US$", "amount": "13.99", "source": "amazon", "asin": "B0GTBTQ77H" },
+    "pet-cup-pink":        { "currency": "US$", "amount": "13.99", "source": "amazon", "asin": "B0GTBTQQZN" },
+    "tick-tweezers":       { "currency": "US$", "amount": "10.00", "source": "amazon", "asin": "" }
+}
