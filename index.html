@@ -191,510 +191,152 @@
                     <p class="section__subtitle" data-i18n="products.subtitle">Descubre nuestra línea completa de productos diseñados para el cuidado de tu mascota</p>
                 </div>
                 
-                <div class="products__grid">
-                    <!-- Product 1: Correa Doble Premium -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="double-leash" itemscope itemtype="https://schema.org/Product">
+                <div class="bento-grid">
+
+                    <!-- HERO: Correa Doble Premium — 2 cols × 2 rows -->
+                    <article class="bento-cell bento-cell--hero" data-product-id="double-leash" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Correa Doble Premium">
                         <meta itemprop="description" content="Correa doble para pasear a dos mascotas con total control y comodidad.">
-                        <div class="category-card__media">
-                            <img itemprop="image" src="Correa%20Doble/1.1.jpg" alt="Correa Doble ARGO'S PACK - Paseos para dos mascotas" loading="lazy">
-                            <span class="category-card__chip">Dual Walk</span>
+                        <div class="bento-cell__bg-image">
+                            <img itemprop="image" src="Correa%20Doble/1.1.jpg" alt="Correa Doble ARGO'S PACK - Paseos para dos mascotas" loading="eager">
                         </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Correa Doble Premium</h3>
-
-                            <p class="category-card__subtitle">
-                                Diseñada para pasear a dos perros al mismo tiempo, con giro anti enredo y agarre ergonómico.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Mecanismo giratorio anti enredo</li>
-                                <li>Mango ergonómico y antideslizante</li>
-                                <li>Ganchos metálicos reforzados</li>
-                                <li>Ideal para paseos urbanos diarios</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GT6RXS6J" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
+                        <div class="bento-cell__content">
+                            <span class="bento-chip">Dual Walk</span>
+                            <h3 class="bento-cell__title">Correa Doble Premium</h3>
+                            <p class="bento-cell__desc">Diseñada para pasear a dos perros al mismo tiempo. Mecanismo giratorio anti enredo y ganchos metálicos reforzados.</p>
+                            <div class="bento-price">
+                                <span class="bento-price__currency">US$</span>
+                                <span class="bento-price__amount" itemprop="price" content="45.00">45.00</span>
+                                <span class="bento-price__source">Amazon</span>
+                            </div>
+                            <a href="https://www.amazon.com/dp/B0GT6RXS6J" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn--primary">
+                                COMPRAR EN AMAZON
                             </a>
                         </div>
                     </article>
 
-                    <!-- Product 2c: Correa Simple Premium -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="simple-leash" itemscope itemtype="https://schema.org/Product">
+                    <!-- Correa Simple Premium — col 3, row 1 -->
+                    <article class="bento-cell bento-cell--feature" data-product-id="simple-leash" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Correa Simple Premium">
                         <meta itemprop="description" content="Correa clásica de una sola sujeción, resistente y cómoda para el uso diario.">
-                        <div class="category-card__media">
+                        <div class="bento-cell__media">
                             <img itemprop="image" src="Correa%20Simple/1.jpg" alt="Correa Simple ARGO'S PACK - Paseos diarios seguros" loading="lazy">
-                            <span class="category-card__chip">Daily Walk</span>
                         </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Correa Simple Premium</h3>
-
-                            <p class="category-card__subtitle">
-                                Ideal para paseos cotidianos, con cinta resistente y gancho metálico reforzado.
-                            </p>
-                            <ul class="category-card__features">
+                        <div class="bento-cell__content">
+                            <span class="bento-chip">Daily Walk</span>
+                            <h3 class="bento-cell__title">Correa Simple</h3>
+                            <ul class="bento-features">
                                 <li>Cinta resistente y duradera</li>
-                                <li>Mango cómodo para el cuidador</li>
                                 <li>Gancho de seguridad metálico</li>
-                                <li>Diseño pensado para uso diario</li>
+                                <li>Mango ergonómico</li>
                             </ul>
-                            <a href="https://www.amazon.com/dp/B0GTS38627" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
+                            <div class="bento-price bento-price--sm">
+                                <span class="bento-price__currency">US$</span>
+                                <span class="bento-price__amount" itemprop="price" content="22.00">22.00</span>
+                            </div>
+                            <a href="https://www.amazon.com/dp/B0GTS38627" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn--sm">COMPRAR</a>
                         </div>
                     </article>
 
-                    <!-- Product 2d: Peine Removedor de Pelo -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="grooming-comb" itemscope itemtype="https://schema.org/Product">
+                    <!-- Pet Cup Portátil — col 4, rows 1–2 (tall) + glassmorphism -->
+                    <article class="bento-cell bento-cell--tall bento-cell--glass" data-product-id="pet-cup" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Pet Cup - Bebedero Portátil">
+                        <meta itemprop="description" content="Botella-bebedero portátil para hidratar a tu mascota en cualquier lugar.">
+                        <div class="bento-cell__media bento-cell__media--tall">
+                            <img itemprop="image" src="Pet%20Cup/1.1.jpg" alt="Pet Cup Verde ARGO'S PACK - Bebedero portátil" loading="lazy">
+                        </div>
+                        <div class="bento-cell__content">
+                            <span class="bento-chip">Hydration</span>
+                            <h3 class="bento-cell__title">Pet Cup Portátil</h3>
+                            <p class="bento-cell__desc">Diseño 2 en 1: botella y bebedero integrado. Sistema antiderrame para paseos y viajes.</p>
+                            <ul class="bento-features">
+                                <li>Sistema antiderrame</li>
+                                <li>Materiales seguros</li>
+                                <li>Fácil de transportar</li>
+                            </ul>
+                            <div class="bento-price bento-price--sm">
+                                <span class="bento-price__currency">US$</span>
+                                <span class="bento-price__amount" itemprop="price" content="13.99">13.99</span>
+                            </div>
+                            <a href="https://www.amazon.com/dp/B0GTBTQ77H" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn--sm">COMPRAR</a>
+                        </div>
+                    </article>
+
+                    <!-- Peine Removedor de Pelo — col 3, row 2 + glassmorphism -->
+                    <article class="bento-cell bento-cell--feature bento-cell--glass" data-product-id="grooming-comb" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Peine Removedor de Pelo">
-                        <meta itemprop="description" content="Peine especializado para remover pelo suelto y subpelo sin da&#241;ar la piel.">
-                        <div class="category-card__media">
-                            <span class="category-card__chip">SOFT TOUCH</span>
-                            <div class="category-card__visual">
-                                <img itemprop="image" src="Hair%20removal%20pet%20comb/1.jpg" alt="Peine removedor de pelo ARGO'S PACK" loading="lazy">
-                            </div>
+                        <meta itemprop="description" content="Peine especializado para remover pelo suelto sin dañar la piel.">
+                        <div class="bento-cell__media">
+                            <img itemprop="image" src="Hair%20removal%20pet%20comb/1.jpg" alt="Peine removedor de pelo ARGO'S PACK" loading="lazy">
                         </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Peine Removedor de Pelo</h3>
-                            <p class="category-card__subtitle">
-                                Ayuda a reducir la ca&#237;da de pelo y mantener el manto suave y sano.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>P&#250;as dise&#241;adas para cuidar la piel</li>
-                                <li>Reduce la ca&#237;da de pelo en el hogar</li>
-                                <li>Ideal para pelo medio y largo</li>
-                                <li>Mango ergon&#243;mico y antideslizante</li>
+                        <div class="bento-cell__content">
+                            <span class="bento-chip">Soft Touch</span>
+                            <h3 class="bento-cell__title">Peine Removedor</h3>
+                            <ul class="bento-features">
+                                <li>Reduce caída de pelo</li>
+                                <li>Ideal para pelo largo</li>
+                                <li>Mango antideslizante</li>
                             </ul>
-                            <a href="https://www.amazon.com/dp/B0GTWXV44T" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
+                            <div class="bento-price bento-price--sm">
+                                <span class="bento-price__currency">US$</span>
+                                <span class="bento-price__amount" itemprop="price" content="11.99">11.99</span>
+                            </div>
+                            <a href="https://www.amazon.com/dp/B0GTWXV44T" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn--sm">COMPRAR</a>
                         </div>
                     </article>
 
-                    <!-- Product 2e: Pet Cup - Bebedero Portatil Green -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="pet-cup" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Pet Cup - Bebedero Portatil">
-                        <meta itemprop="description" content="Botella-bebedero portatil para hidratar a tu mascota en cualquier lugar.">
-                        <div class="category-card__media">
-                            <span class="category-card__chip">GREEN</span>
-                            <div class="category-card__visual">
-                                <img itemprop="image" src="Pet%20Cup/1.1.jpg" alt="Pet Cup Verde ARGO'S PACK - Bebedero portatil" loading="lazy">
+                    <!-- Stats Block — cols 1–2, row 3 (interactive counter) -->
+                    <article class="bento-cell bento-cell--stats" aria-label="Estadísticas ARGO'S PACK">
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <div class="bento-stat__number">
+                                    <span class="bento-stat__num" data-target="10">0</span>
+                                    <span class="bento-stat__unit">+</span>
+                                </div>
+                                <span class="bento-stat__label">Productos Premium</span>
                             </div>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Pet Cup - Bebedero Verde</h3>
-                            <p class="category-card__subtitle">
-                                Perfecta para paseos, viajes y salidas al parque, evitando desperdicio de agua.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Dise&#241;o 2 en 1: botella y bebedero</li>
-                                <li>Sistema antiderrame y bloqueo</li>
-                                <li>Facil de transportar en la mano o mochila</li>
-                                <li>Materiales seguros para uso alimenticio</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GTBTQ77H" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
+                            <div class="bento-stat-divider"></div>
+                            <div class="bento-stat">
+                                <div class="bento-stat__number">
+                                    <span class="bento-stat__num" data-target="4" data-decimal=".8">0</span>
+                                    <span class="bento-stat__unit">★</span>
+                                </div>
+                                <span class="bento-stat__label">Rating Amazon</span>
+                            </div>
+                            <div class="bento-stat-divider"></div>
+                            <div class="bento-stat">
+                                <div class="bento-stat__number">
+                                    <span class="bento-stat__num" data-target="100">0</span>
+                                    <span class="bento-stat__unit">%</span>
+                                </div>
+                                <span class="bento-stat__label">Envíos Seguros</span>
+                            </div>
                         </div>
                     </article>
 
-                    <!-- Product 2f: Pinza Quitagarrapatas -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="tick-tweezers" itemscope itemtype="https://schema.org/Product">
+                    <!-- Pinza Quitagarrapatas — col 3, row 3 -->
+                    <article class="bento-cell bento-cell--small" data-product-id="tick-tweezers" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="Pinza Quitagarrapatas">
-                        <meta itemprop="description" content="Herramienta especifica para extraer garrapatas de forma segura.">
-                        <div class="category-card__media">
-                            <span class="category-card__chip">SAFE CARE</span>
-                            <div class="category-card__visual">
-                                <img itemprop="image" src="Pet%20tick%20tweezers/1.1.jpg" alt="Pinza quitagarrapatas ARGO'S PACK" loading="lazy">
+                        <meta itemprop="description" content="Herramienta específica para extraer garrapatas de forma segura.">
+                        <div class="bento-cell__media">
+                            <img itemprop="image" src="Pet%20tick%20tweezers/1.1.jpg" alt="Pinza quitagarrapatas ARGO'S PACK" loading="lazy">
+                        </div>
+                        <div class="bento-cell__content">
+                            <span class="bento-chip">Safe Care</span>
+                            <h3 class="bento-cell__title">Pinza Quitagarrapatas</h3>
+                            <div class="bento-price bento-price--sm">
+                                <span class="bento-price__currency">US$</span>
+                                <span class="bento-price__amount" itemprop="price" content="10.00">10.00</span>
                             </div>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Pinza Quitagarrapatas</h3>
-                            <p class="category-card__subtitle">
-                                Dise&#241;ada para retirar garrapatas evitando que queden restos en la piel de tu mascota.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Punta especial para una extraccion precisa</li>
-                                <li>Ayuda a reducir el riesgo de infecciones</li>
-                                <li>Tama&#241;o compacto y facil de guardar</li>
-                                <li>Ideal para botiquin de primeros auxilios</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="bento-btn bento-btn--sm">VER PRODUCTO</a>
                         </div>
                     </article>
 
-                    <!-- Peine Removedor de Pelo - Yellow -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="grooming-comb-yellow" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Peine Removedor de Pelo - Yellow">
-                        <meta itemprop="description" content="Peine removedor de pelo en color amarillo con boton de liberacion de un clic.">
-                        <div class="category-card__media">
-                            <span class="category-card__chip">YELLOW</span>
-                            <div class="category-card__visual">
-                                <img itemprop="image" src="Hair%20removal%20pet%20comb/2.jpg" alt="Peine removedor de pelo amarillo ARGO'S PACK" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Peine Removedor de Pelo</h3>
-                            <p class="category-card__subtitle">
-                                Ayuda a reducir la ca&#237;da de pelo y mantener el manto suave y sano.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>P&#250;as dise&#241;adas para cuidar la piel</li>
-                                <li>Reduce la ca&#237;da de pelo en el hogar</li>
-                                <li>Ideal para pelo medio y largo</li>
-                                <li>Mango ergon&#243;mico y antideslizante</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GTWVN4XV" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Pet Cup - Bebedero Portatil Pink -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="pet-cup-pink" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Pet Cup - Bebedero Portatil Rosa">
-                        <meta itemprop="description" content="Botella-bebedero portatil en rosa para hidratar a tu mascota en cualquier lugar.">
-                        <div class="category-card__media">
-                            <span class="category-card__chip">PINK</span>
-                            <div class="category-card__visual">
-                                <img itemprop="image" src="Pet%20Cup/1.jpg" alt="Pet Cup Rosa ARGO'S PACK - Bebedero portatil" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Pet Cup - Bebedero Rosa</h3>
-                            <p class="category-card__subtitle">
-                                Perfecta para paseos, viajes y salidas al parque, evitando desperdicio de agua.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Dise&#241;o 2 en 1: botella y bebedero</li>
-                                <li>Sistema antiderrame y bloqueo</li>
-                                <li>Facil de transportar en la mano o mochila</li>
-                                <li>Materiales seguros para uso alimenticio</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GTBTQQZN" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Correa Simple Premium - Purple -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="simple-leash-purple" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Correa Simple Premium - Purple">
-                        <meta itemprop="description" content="Correa clasica de una sola sujecion en color morado, resistente y comoda para el uso diario.">
-                        <div class="category-card__media">
-                            <img itemprop="image" src="Correa%20Simple/5.jpg" alt="Correa Simple Morada ARGO'S PACK - Paseos diarios" loading="lazy">
-                            <span class="category-card__chip">PURPLE</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Correa Simple - Purple</h3>
-                            <p class="category-card__subtitle">
-                                Ideal para paseos cotidianos, con cinta resistente y gancho met&#225;lico reforzado.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Cinta resistente y duradera</li>
-                                <li>Mango c&#243;modo para el cuidador</li>
-                                <li>Gancho de seguridad met&#225;lico</li>
-                                <li>Dise&#241;o pensado para uso diario</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GTRYB3KN" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Correa Doble Premium - Sky Blue -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="double-leash-sky" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Correa Doble Premium - Sky Blue">
-                        <meta itemprop="description" content="Correa doble para pasear a dos mascotas en color sky blue con total control y comodidad.">
-                        <div class="category-card__media">
-                            <img itemprop="image" src="Correa%20Doble/1.2.jpg" alt="Correa Doble Sky Blue ARGO'S PACK" loading="lazy">
-                            <span class="category-card__chip">SKY BLUE</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Correa Doble - Sky Blue</h3>
-                            <p class="category-card__subtitle">
-                                Dise&#241;ada para pasear a dos perros al mismo tiempo, con giro anti enredo y agarre ergon&#243;mico.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Mecanismo giratorio anti enredo</li>
-                                <li>Mango ergon&#243;mico y antideslizante</li>
-                                <li>Ganchos met&#225;licos reforzados</li>
-                                <li>Ideal para paseos urbanos diarios</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GT7RQDYM" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Correa Doble Premium - Khaki -->
-                    <article class="product__card category-card category-card--collapsible" data-product-id="double-leash-khaki" itemscope itemtype="https://schema.org/Product">
-                        <meta itemprop="name" content="Correa Doble Premium - Khaki">
-                        <meta itemprop="description" content="Correa doble para pasear a dos mascotas en color khaki con total control y comodidad.">
-                        <div class="category-card__media">
-                            <img itemprop="image" src="Correa%20Doble/5.jpg" alt="Correa Doble Khaki ARGO'S PACK" loading="lazy">
-                            <span class="category-card__chip">KHAKI</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Correa Doble - Khaki</h3>
-                            <p class="category-card__subtitle">
-                                Dise&#241;ada para pasear a dos perros al mismo tiempo, con giro anti enredo y agarre ergon&#243;mico.
-                            </p>
-                            <ul class="category-card__features">
-                                <li>Mecanismo giratorio anti enredo</li>
-                                <li>Mango ergon&#243;mico y antideslizante</li>
-                                <li>Ganchos met&#225;licos reforzados</li>
-                                <li>Ideal para paseos urbanos diarios</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GT734CMW" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Category Cards: Higiene y Cuidado -->
-                    <article class="product__card category-card" data-product-id="hygiene-care">
-                        <div class="category-card__media">
-                            <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Higiene y Cuidado" loading="lazy">
-                            <span class="category-card__chip">Pure Care</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title" data-i18n="products.items.hygiene.name">Higiene y Cuidado</h3>
-                            
-                            <p class="category-card__subtitle" data-i18n="products.items.hygiene.subtitle">Productos naturales para el cuidado y bienestar de tu mascota.</p>
-                            <ul class="category-card__features">
-                                <li data-i18n="products.items.hygiene.features.0">Productos naturales y seguros</li>
-                                <li data-i18n="products.items.hygiene.features.1">Suaves con la piel sensible</li>
-                                <li data-i18n="products.items.hygiene.features.2">Fórmulas especializadas</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Product 3: Featured Product Gallery -->
-                    <article class="product__card product__card--gallery">
-                        <div class="product__gallery">
-                            <div class="product__thumbnails">
-                                <button class="product__thumbnail active" data-image="Correa%20Doble/1.1.jpg" data-alt="Correa doble ARGO'S PACK en color verde" data-title="Correa Doble Premium" data-description="Diseñada para pasear dos mascotas con control estable y agarre cómodo. Su sistema de doble salida ayuda a distribuir mejor la tensión durante caminatas urbanas o recorridos más largos." data-benefits='["Paseo simultáneo para dos mascotas","Mango ergonómico de buen agarre","Diseño resistente para uso diario","Movimiento más ordenado y seguro","Ideal para rutinas activas"]' data-link="https://www.amazon.com/dp/B0GT6RXS6J" aria-label="Ver correa doble premium">
-                                    <img src="Correa%20Doble/1.1.jpg" alt="Correa doble ARGO'S PACK en miniatura" loading="lazy">
-                                </button>
-                                <button class="product__thumbnail" data-image="Correa%20Simple/1.jpg" data-alt="Correa simple ARGO'S PACK en color negro" data-title="Correa Simple Daily Walk" data-description="Una opción práctica para paseos diarios con un formato liviano y fácil de usar. Combina control, comodidad y un acabado limpio para acompañar salidas cortas o recorridos frecuentes." data-benefits='["Formato liviano y funcional","Control cómodo en cada paseo","Terminaciones resistentes","Fácil de combinar con arnés o collar","Pensada para uso cotidiano"]' data-link="https://www.amazon.com/dp/B0GTS38627" aria-label="Ver correa simple daily walk">
-                                    <img src="Correa%20Simple/1.jpg" alt="Correa simple ARGO'S PACK en miniatura" loading="lazy">
-                                </button>
-                                <button class="product__thumbnail" data-image="Hair%20removal%20pet%20comb/4.jpg" data-alt="Peine removedor de pelo ARGO'S PACK" data-title="Peine Removedor de Pelo" data-description="Peine de aseo pensado para retirar pelo suelto y ayudar a mantener el pelaje más prolijo. Su formato permite incorporar la rutina de grooming de forma simple y cómoda." data-benefits='["Ayuda a retirar pelo suelto","Mejora la rutina de grooming","Uso cómodo y rápido","Apto para mantenimiento frecuente","Diseño práctico para el hogar"]' data-link="https://www.amazon.com/dp/B0GTWXV44T" aria-label="Ver peine removedor de pelo">
-                                    <img src="Hair%20removal%20pet%20comb/4.jpg" alt="Peine removedor de pelo ARGO'S PACK en miniatura" loading="lazy">
-                                </button>
-                                <button class="product__thumbnail" data-image="Pet%20Cup/1.1.jpg" data-alt="Pet Cup ARGO'S PACK en color verde" data-title="Pet Cup Portable" data-description="Bebedero portátil ideal para salidas, viajes y paseos largos. Su diseño compacto facilita llevar agua para tu mascota sin ocupar demasiado espacio en bolsos o mochilas." data-benefits='["Ideal para paseos y viajes","Formato portátil y compacto","Práctico para hidratar en movimiento","Fácil de transportar","Diseño funcional para uso exterior"]' data-link="https://www.amazon.com/dp/B0GTBTQ77H" aria-label="Ver pet cup portable">
-                                    <img src="Pet%20Cup/1.1.jpg" alt="Pet Cup ARGO'S PACK en miniatura" loading="lazy">
-                                </button>
-                                <button class="product__thumbnail" data-image="Pet%20tick%20tweezers/1.1.jpg" data-alt="Pinza quitagarrapatas ARGO'S PACK" data-title="Pinza Quitagarrapatas" data-description="Herramienta compacta para retirar garrapatas con mayor precisión y sumar un cuidado preventivo en salidas al parque, campo o zonas con vegetación." data-benefits='["Retiro más preciso","Formato compacto y fácil de guardar","Útil para salidas al aire libre","Aporta a la rutina de cuidado preventivo","Práctica para tener siempre a mano"]' data-link="https://www.mercadolibre.com.ar" aria-label="Ver pinza quitagarrapatas">
-                                    <img src="Pet%20tick%20tweezers/1.1.jpg" alt="Pinza quitagarrapatas ARGO'S PACK en miniatura" loading="lazy">
-                                </button>
-                                <button class="product__thumbnail" data-image="Pet%20Cup/1.jpg" data-alt="Pet Cup ARGO'S PACK en color rosa" data-title="Pet Cup Pink Edition" data-description="La misma practicidad del formato portátil en una variante de color con presencia visual más amable. Perfecta para sumar hidratación rápida en traslados y paseos diarios." data-benefits='["Variante portable con diseño atractivo","Lista para salidas diarias","Hidratación rápida fuera de casa","Ligera y fácil de llevar","Buena opción para viajes cortos"]' data-link="https://www.amazon.com/dp/B0GTBTQQZN" aria-label="Ver pet cup pink edition">
-                                    <img src="Pet%20Cup/1.jpg" alt="Pet Cup rosa ARGO'S PACK en miniatura" loading="lazy">
-                                </button>
-                            </div>
-                            <div class="product__main-image">
-                                <img src="Correa%20Doble/1.1.jpg" alt="Correa doble ARGO'S PACK en color verde" class="product__main-img" id="main-product-image" loading="eager">
-                            </div>
-                        </div>
-                        <div class="product__content">
-                            <h3 class="product__name" id="gallery-product-title">Correa Doble Premium</h3>
-                            <p class="product__description" id="gallery-product-description">
-                                Transportador para gatos, perros pequeños y mascotas hasta 20lbs con luz LED interior recargable. 
-                                Aprobado para aerolíneas TSA. Paredes laterales expandibles, 4 puertas y almohadilla removible.
-                            </p>
-                            <ul class="product__benefits" id="gallery-product-benefits">
-                                <li data-i18n="products.items.carrier.benefits.0">Paredes laterales expandibles</li>
-                                <li data-i18n="products.items.carrier.benefits.1">Luz LED interior recargable</li>
-                                <li data-i18n="products.items.carrier.benefits.2">Aprobado para aerolíneas TSA</li>
-                                <li data-i18n="products.items.carrier.benefits.3">4 puertas de acceso</li>
-                                <li data-i18n="products.items.carrier.benefits.4">Almohadilla removible y lavable</li>
-                                <li data-i18n="products.items.carrier.benefits.5">Ideal para mascotas hasta 20lbs</li>
-                            </ul>
-                            <a href="https://www.amazon.com/dp/B0GT6RXS6J" target="_blank" rel="noopener noreferrer" class="btn btn--cta" id="gallery-product-link" data-i18n="products.buyButton">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 4 -->
-                    <article class="product__card category-card" data-product-id="feeders-drinkers">
-                        <div class="category-card__media">
-                            <img src="Utils/products/feeders.jpg" alt="Producto ARGO'S PACK - Comedores y Bebederos" loading="lazy">
-                            <span class="category-card__chip">Healthy Flow</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Comedores y Bebederos</h3>
-                            
-                            <p class="category-card__subtitle">Set ergonómico con bowls elevados y acabados fáciles de limpiar.</p>
-                            <ul class="category-card__features">
-                                <li>Materiales no tóxicos</li>
-                                <li>Diseño antideslizante</li>
-                                <li>Fácil mantenimiento</li>
-                                <li>Diferentes capacidades</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 5 -->
-                    <article class="product__card category-card" data-product-id="daily-hygiene">
-                        <div class="category-card__media">
-                            <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Higiene y Cuidado" loading="lazy">
-                            <span class="category-card__chip">Pure Care</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Higiene y Cuidado</h3>
-                            
-                            <p class="category-card__subtitle">Productos naturales para el cuidado y bienestar de tu mascota.</p>
-                            <ul class="category-card__features">
-                                <li>Productos naturales</li>
-                                <li>Suaves con la piel</li>
-                                <li>Efectivos y seguros</li>
-                                <li>Fórmulas especializadas</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 6 -->
-                    <article class="product__card category-card" data-product-id="style-accessories">
-                        <div class="category-card__media">
-                            <img src="Utils/products/clothing.jpg" alt="Producto ARGO'S PACK - Ropa y Accesorios" loading="lazy">
-                            <span class="category-card__chip">Style Pack</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Ropa y Accesorios</h3>
-                            
-                            <p class="category-card__subtitle">Diseños modernos y cómodos para todas las ocasiones.</p>
-                            <ul class="category-card__features">
-                                <li>Telas de calidad</li>
-                                <li>Diseños modernos</li>
-                                <li>Variedad de tallas</li>
-                                <li>Confort garantizado</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 7 -->
-                    <article class="product__card category-card" data-product-id="travel-gear">
-                        <div class="category-card__media">
-                            <img src="Utils/products/leash-white.jpg" alt="Producto ARGO'S PACK - Transporte y Viaje" loading="lazy">
-                            <span class="category-card__chip">Travel Pro</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Transporte y Viaje</h3>
-                            
-                            <p class="category-card__subtitle">Soluciones seguras y cómodas para viajar con tu mascota.</p>
-                            <ul class="category-card__features">
-                                <li>Transportadores aprobados TSA</li>
-                                <li>Diseño ergonómico y seguro</li>
-                                <li>Fácil de limpiar y mantener</li>
-                                <li>Múltiples tamaños disponibles</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 8 -->
-                    <article class="product__card category-card" data-product-id="health-wellness">
-                        <div class="category-card__media">
-                            <img src="Utils/products/feeders.jpg" alt="Producto ARGO'S PACK - Salud y Bienestar" loading="lazy">
-                            <span class="category-card__chip">Health Plus</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Salud y Bienestar</h3>
-                            
-                            <p class="category-card__subtitle">Productos especializados para mantener a tu mascota saludable y feliz.</p>
-                            <ul class="category-card__features">
-                                <li>Productos veterinarios aprobados</li>
-                                <li>Fórmulas naturales y seguras</li>
-                                <li>Promueven el bienestar integral</li>
-                                <li>Resultados comprobados</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 9 -->
-                    <article class="product__card category-card" data-product-id="safety-protection">
-                        <div class="category-card__media">
-                            <img src="Utils/products/clothing.jpg" alt="Producto ARGO'S PACK - Seguridad y Protección" loading="lazy">
-                            <span class="category-card__chip">Safety Pro</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Seguridad y Protección</h3>
-                            
-                            <p class="category-card__subtitle">Equipamiento de seguridad para proteger a tu mascota en todo momento.</p>
-                            <ul class="category-card__features">
-                                <li>Arneses de seguridad certificados</li>
-                                <li>Placas de identificación personalizadas</li>
-                                <li>Reflectores para visibilidad nocturna</li>
-                                <li>Materiales resistentes y duraderos</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 10 -->
-                    <article class="product__card category-card" data-product-id="entertainment">
-                        <div class="category-card__media">
-                            <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Entretenimiento" loading="lazy">
-                            <span class="category-card__chip">Fun Pack</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Entretenimiento</h3>
-                            
-                            <p class="category-card__subtitle">Juguetes y actividades para mantener a tu mascota activa y entretenida.</p>
-                            <ul class="category-card__features">
-                                <li>Juguetes interactivos inteligentes</li>
-                                <li>Actividades para estimulación mental</li>
-                                <li>Diseños seguros y duraderos</li>
-                                <li>Para todas las edades y tamaños</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 11 - Grooming Lab -->
-                    <article class="product__card category-card" data-product-id="grooming-care">
-                        <div class="category-card__media">
-                            <img src="Utils/products/hygiene.jpg" alt="Producto ARGO'S PACK - Aseo y Cuidado" loading="lazy">
-                            <span class="category-card__chip">Grooming Pro</span>
-                        </div>
-                        <div class="category-card__body">
-                            <h3 class="category-card__title">Aseo y Cuidado</h3>
-                            
-                            <p class="category-card__subtitle">Herramientas profesionales para mantener a tu mascota limpia y saludable.</p>
-                            <ul class="category-card__features">
-                                <li>Kits de aseo completos</li>
-                                <li>Productos de higiene premium</li>
-                                <li>Herramientas profesionales</li>
-                                <li>Cuidado integral y seguro</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
-                                COMPRAR
-                            </a>
+                    <!-- CTA Block — col 4, row 3 -->
+                    <article class="bento-cell bento-cell--cta" aria-label="Ver más productos">
+                        <div class="bento-cell__content bento-cell__content--center">
+                            <p class="bento-cta-headline">Más productos esperándote</p>
+                            <a href="#mas-productos" class="bento-btn bento-btn--gradient">Explorar catálogo</a>
                         </div>
                     </article>
 
@@ -836,6 +478,7 @@
     <script src="scripts/contact-form.js?v=20260314"></script>
     <script src="scripts/lightbox.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/interactive-cards.js"></script>
 
     <!-- Lightbox Structure -->
     <div id="lightbox" class="lightbox">
