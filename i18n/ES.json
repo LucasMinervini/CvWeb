@@ -59,6 +59,53 @@
     "chooseModel": "COMPRAR",
     "viewCollection": "COMPRAR",
     "exploreLine": "COMPRAR",
+    "bento": {
+      "doubleLeash": {
+        "title": "Correa Doble Premium",
+        "desc": "Diseñada para pasear a dos perros al mismo tiempo. Mecanismo giratorio anti enredo y ganchos metálicos reforzados.",
+        "buyBtn": "COMPRAR EN AMAZON"
+      },
+      "simpleLeash": {
+        "title": "Correa Simple",
+        "features": [
+          "Cinta resistente y duradera",
+          "Gancho de seguridad metálico",
+          "Mango ergonómico"
+        ],
+        "buyBtn": "COMPRAR"
+      },
+      "petCup": {
+        "title": "Pet Cup Portátil",
+        "desc": "Diseño 2 en 1: botella y bebedero integrado. Sistema antiderrame para paseos y viajes.",
+        "features": [
+          "Sistema antiderrame",
+          "Materiales seguros",
+          "Fácil de transportar"
+        ],
+        "buyBtn": "COMPRAR"
+      },
+      "groomingComb": {
+        "title": "Peine Removedor",
+        "features": [
+          "Reduce caída de pelo",
+          "Ideal para pelo largo",
+          "Mango antideslizante"
+        ],
+        "buyBtn": "COMPRAR"
+      },
+      "stats": {
+        "products": "Productos Premium",
+        "rating": "Rating Amazon",
+        "shipping": "Envíos Seguros"
+      },
+      "tickTweezers": {
+        "title": "Pinza Quitagarrapatas (Próximamente...)"
+      },
+      "cta": {
+        "headline": "Más productos esperándote",
+        "btn": "Explorar catálogo"
+      }
+    },
     "items": {
       "leashBlack": {
         "name": "Correa Retráctil Premium - Negra",

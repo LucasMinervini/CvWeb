@@ -59,6 +59,53 @@
     "chooseModel": "COMPRAR",
     "viewCollection": "COMPRAR",
     "exploreLine": "COMPRAR",
+    "bento": {
+      "doubleLeash": {
+        "title": "Double Leash Premium",
+        "desc": "Designed to walk two dogs at once. Anti-tangle swivel mechanism and reinforced metal clips.",
+        "buyBtn": "BUY ON AMAZON"
+      },
+      "simpleLeash": {
+        "title": "Simple Leash",
+        "features": [
+          "Durable, long-lasting strap",
+          "Metal safety clip",
+          "Ergonomic handle"
+        ],
+        "buyBtn": "BUY"
+      },
+      "petCup": {
+        "title": "Portable Pet Cup",
+        "desc": "2-in-1 design: bottle and integrated drinker. Leak-proof system for walks and travel.",
+        "features": [
+          "Leak-proof system",
+          "Safe materials",
+          "Easy to carry"
+        ],
+        "buyBtn": "BUY"
+      },
+      "groomingComb": {
+        "title": "Hair Removal Comb",
+        "features": [
+          "Reduces shedding",
+          "Ideal for long coats",
+          "Non-slip handle"
+        ],
+        "buyBtn": "BUY"
+      },
+      "stats": {
+        "products": "Premium Products",
+        "rating": "Amazon Rating",
+        "shipping": "Safe Shipping"
+      },
+      "tickTweezers": {
+        "title": "Tick Tweezers (Coming Soon...)"
+      },
+      "cta": {
+        "headline": "More products waiting for you",
+        "btn": "Explore catalog"
+      }
+    },
     "items": {
       "leashBlack": {
         "name": "Premium Retractable Leash - Midnight Edition",
