@@ -24,6 +24,7 @@
     <link rel="apple-touch-icon" href="Utils/PNG/isotipo-positivo.png">
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pet-companion.css">
 </head>
 <body>
     <script type="application/ld+json">
@@ -357,53 +358,72 @@
             </div>
         </section>
 
-        <!-- Más Productos -->
-        <section class="more-products" id="mas-productos">
+        <!-- Desafío Mental -->
+        <section class="more-products genius-challenge" id="mas-productos">
             <div class="bouncing-ball bouncing-ball--1"></div>
             <div class="bouncing-ball bouncing-ball--2"></div>
             <div class="bouncing-ball bouncing-ball--3"></div>
             <div class="bouncing-ball bouncing-ball--4"></div>
             <div class="container">
-                <div class="section__header">
-                    <span class="section__badge" data-i18n="moreProducts.badge">Más Productos</span>
-                    <h2 class="section__title" data-i18n="moreProducts.title">Descubre nuestra línea completa</h2>
-                </div>
-                <div class="more-products__grid">
-                    <article class="more-product__card">
-                        <div class="more-product__image">
-                            <img src="Utils/more-products/toys.jpg" alt="Producto ARGO'S PACK - Juguetes Interactivos" class="more-product__img" loading="lazy">
+                <div class="genius-module">
+
+                    <!-- Encabezado -->
+                    <div class="genius-module__header">
+                        <span class="section__badge">Estimulación Mental</span>
+                        <h2 class="genius-module__title">¿Es tu mascota un Genio Oculto?</h2>
+                        <p class="genius-module__subtitle">Ponte a prueba con el Desafío de Estimulación Mental de Argo's.</p>
+                    </div>
+
+                    <!-- Escenario del juego -->
+                    <div class="genius-stage">
+
+                        <!-- Instrucción -->
+                        <p class="genius-instruction" id="genius-instruction">Sigue la golosina... ¡y haz clic donde creas que está!</p>
+
+                        <!-- Pista de cuencos -->
+                        <div class="cups-track" id="cups-track">
+                            <div class="cup-item" id="cup-item-0">
+                                <div class="treat" aria-hidden="true">🦴</div>
+                                <button class="cup" aria-label="Cuenco 1" disabled>
+                                    <div class="cup__base"></div>
+                                    <div class="cup__dome"></div>
+                                </button>
+                            </div>
+                            <div class="cup-item" id="cup-item-1">
+                                <div class="treat" aria-hidden="true">🦴</div>
+                                <button class="cup" aria-label="Cuenco 2" disabled>
+                                    <div class="cup__base"></div>
+                                    <div class="cup__dome"></div>
+                                </button>
+                            </div>
+                            <div class="cup-item" id="cup-item-2">
+                                <div class="treat" aria-hidden="true">🦴</div>
+                                <button class="cup" aria-label="Cuenco 3" disabled>
+                                    <div class="cup__base"></div>
+                                    <div class="cup__dome"></div>
+                                </button>
+                            </div>
                         </div>
-                        <div class="more-product__content">
-                            <h3 class="more-product__name" data-i18n="moreProducts.toys.name">Juguetes Interactivos</h3>
-                            <ul class="more-product__benefits">
-                                <li data-i18n="moreProducts.toys.benefits.0">Estimulación mental y física</li>
-                                <li data-i18n="moreProducts.toys.benefits.1">Materiales seguros y duraderos</li>
-                                <li data-i18n="moreProducts.toys.benefits.2">Diseños innovadores</li>
-                                <li data-i18n="moreProducts.toys.benefits.3">Para todas las edades</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
-                                COMPRAR
-                            </a>
+
+                        <!-- Botón CTA principal -->
+                        <div class="genius-cta-wrapper" id="genius-cta-wrapper">
+                            <button class="genius-play-btn" id="genius-play-btn" type="button">
+                                ¡Encuentra el Premio y Desbloquea su Potencial!
+                            </button>
                         </div>
-                    </article>
-                    <article class="more-product__card">
-                        <div class="more-product__image">
-                            <img src="Utils/more-products/beds.jpg" alt="Producto ARGO'S PACK - Camas Premium" class="more-product__img" loading="lazy">
+
+                        <!-- Panel de resultado -->
+                        <div class="genius-result" id="genius-result" hidden>
+                            <span class="genius-result__icon" id="genius-result-icon" aria-hidden="true">🎉</span>
+                            <p class="genius-result__text" id="genius-result-text">¡Correcto! Tu mascota tiene una mente afilada.</p>
+                            <p class="genius-result__sub">Aprende cómo mantenerla así.</p>
+                            <a href="#contact-us" class="genius-result__link">Conoce nuestros productos de estimulación →</a>
+                            <button class="genius-replay-btn" id="genius-replay-btn" type="button">↺ Jugar de nuevo</button>
                         </div>
-                        <div class="more-product__content">
-                            <h3 class="more-product__name" data-i18n="moreProducts.beds.name">Camas Premium</h3>
-                            <ul class="more-product__benefits">
-                                <li data-i18n="moreProducts.beds.benefits.0">Materiales hipoalergénicos</li>
-                                <li data-i18n="moreProducts.beds.benefits.1">Diseño ortopédico</li>
-                                <li data-i18n="moreProducts.beds.benefits.2">Fácil mantenimiento</li>
-                                <li data-i18n="moreProducts.beds.benefits.3">Múltiples tamaños disponibles</li>
-                            </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
-                                COMPRAR
-                            </a>
-                        </div>
-                    </article>
-                </div>
+
+                    </div><!-- /genius-stage -->
+
+                </div><!-- /genius-module -->
             </div>
         </section>
 
@@ -492,6 +512,7 @@
     <script src="scripts/lightbox.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/interactive-cards.js"></script>
+    <script src="scripts/pet-companion.js"></script>
 
     <!-- Lightbox Structure -->
     <div id="lightbox" class="lightbox">

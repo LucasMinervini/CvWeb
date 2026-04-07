@@ -1,0 +1,342 @@
+/* ============================================
+   Módulo: Desafío Mental – ¿Es tu mascota un Genio Oculto?
+   ============================================ */
+
+.genius-challenge {
+    min-height: 720px;
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+}
+
+/* ---- Wrapper central ---- */
+.genius-module {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.genius-module__header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.genius-module__title {
+    font-size: clamp(1.8rem, 4vw, var(--font-size-3xl));
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.genius-module__subtitle {
+    color: var(--color-accent-light);
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+}
+
+/* ---- Stage – frosted-glass card ---- */
+.genius-stage {
+    background: rgba(13, 40, 24, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(82, 183, 136, 0.35);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(82, 183, 136, 0.1) inset;
+    text-align: center;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+/* ---- Instruction text ---- */
+.genius-instruction {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    min-height: 1.7em;
+    transition: opacity 0.4s ease;
+}
+
+.genius-instruction.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ---- Cups track (absolute-position container) ---- */
+.cups-track {
+    position: relative;
+    height: 155px;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+/* ---- Individual cup item (absolutely positioned, moves during shuffle) ---- */
+.cup-item {
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* transition applied by JS */
+}
+
+/* ---- Treat emoji hidden under the cup ---- */
+.treat {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    filter: drop-shadow(0 0 8px rgba(255, 210, 60, 0.85));
+}
+
+.cup-item.treat-here .treat {
+    opacity: 1;
+}
+
+/* ---- The cup button ---- */
+.cup {
+    position: relative;
+    z-index: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.cup:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 50%;
+}
+
+.cup.is-guessable {
+    cursor: pointer;
+}
+
+.cup.is-guessable:hover {
+    transform: translateY(-10px);
+}
+
+.cup.is-lifted {
+    transform: translateY(-80px);
+}
+
+/* Cup shape */
+.cup__base {
+    width: 34px;
+    height: 9px;
+    background: linear-gradient(to right, #4a9e72, #2d6a4f, #4a9e72);
+    border-radius: 4px 4px 2px 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.cup__dome {
+    width: 98px;
+    height: 74px;
+    background: linear-gradient(145deg,
+        #52b788 5%,
+        #40916c 42%,
+        #2d6a4f 78%,
+        #1b4332 100%);
+    border-radius: 49px 49px 12px 12px;
+    box-shadow:
+        inset -6px -6px 18px rgba(0, 0, 0, 0.38),
+        inset 6px 8px 14px rgba(255, 255, 255, 0.13),
+        0 5px 18px rgba(0, 0, 0, 0.42);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cup.is-guessable:hover .cup__dome {
+    background: linear-gradient(145deg,
+        #63c99a 5%,
+        #52b788 40%,
+        #40916c 80%,
+        #2d6a4f 100%);
+    box-shadow:
+        inset -6px -6px 18px rgba(0, 0, 0, 0.25),
+        inset 6px 8px 14px rgba(255, 255, 255, 0.22),
+        0 0 28px rgba(82, 183, 136, 0.6),
+        0 5px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- CTA wrapper ---- */
+.genius-cta-wrapper {
+    width: 100%;
+    max-width: 460px;
+}
+
+.genius-cta-wrapper.is-hidden {
+    display: none;
+}
+
+/* ---- Play button with pulsing glow ---- */
+.genius-play-btn {
+    width: 100%;
+    padding: 1.1rem var(--spacing-lg);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    color: var(--color-primary-dark);
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    animation: ctaGlow 2.4s ease-in-out infinite;
+    transition: transform 0.2s ease;
+}
+
+.genius-play-btn:hover {
+    transform: translateY(-3px);
+    animation: none;
+    box-shadow: 0 14px 40px rgba(82, 183, 136, 0.68);
+}
+
+.genius-play-btn:active {
+    transform: translateY(0);
+}
+
+@keyframes ctaGlow {
+    0%, 100% { box-shadow: 0 4px 20px rgba(82, 183, 136, 0.4); }
+    50%       { box-shadow: 0 8px 44px rgba(82, 183, 136, 0.78), 0 0 64px rgba(82, 183, 136, 0.28); }
+}
+
+/* ---- Result panel ---- */
+.genius-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.genius-result[hidden] {
+    display: none;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.genius-result__icon {
+    font-size: 3.2rem;
+    animation: resultBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes resultBounce {
+    from { transform: scale(0.4); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.genius-result__text {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--color-white);
+    text-shadow: 0 0 24px rgba(82, 183, 136, 0.55);
+}
+
+.genius-result__text.is-wrong {
+    color: #ffd166;
+    text-shadow: 0 0 20px rgba(255, 209, 102, 0.5);
+}
+
+.genius-result__sub {
+    color: rgba(149, 213, 178, 0.85);
+    font-size: var(--font-size-base);
+    margin-top: -0.25rem;
+}
+
+.genius-result__link {
+    display: inline-block;
+    padding: 0.75rem 1.7rem;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+    border-radius: var(--border-radius-lg);
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(82, 183, 136, 0.45);
+    transition: all var(--transition-base);
+    margin-top: var(--spacing-xs);
+}
+
+.genius-result__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(82, 183, 136, 0.62);
+}
+
+.genius-replay-btn {
+    background: none;
+    border: 1px solid rgba(82, 183, 136, 0.4);
+    color: rgba(149, 213, 178, 0.75);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+    cursor: pointer;
+    padding: 0.4rem 0.95rem;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+    margin-top: var(--spacing-xs);
+}
+
+.genius-replay-btn:hover {
+    color: var(--color-accent-light);
+    border-color: rgba(82, 183, 136, 0.7);
+    background: rgba(82, 183, 136, 0.09);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .genius-stage {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .cup__dome {
+        width: 74px;
+        height: 58px;
+    }
+
+    .cup__base {
+        width: 26px;
+        height: 7px;
+    }
+
+    .cups-track {
+        height: 115px;
+    }
+
+    .cup.is-lifted {
+        transform: translateY(-58px);
+    }
+
+    .genius-play-btn {
+        font-size: var(--font-size-base);
+        padding: 0.95rem var(--spacing-md);
+    }
+
+    .genius-result__text {
+        font-size: var(--font-size-lg);
+    }
+}
