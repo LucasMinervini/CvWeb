@@ -285,31 +285,45 @@
                         </div>
                     </article>
 
-                    <!-- Stats Block — cols 1–2, row 3 (interactive counter) -->
-                    <article class="bento-cell bento-cell--stats" aria-label="Estadísticas ARGO'S PACK">
-                        <div class="bento-stats">
-                            <div class="bento-stat">
-                                <div class="bento-stat__number">
-                                    <span class="bento-stat__num" data-target="10">0</span>
-                                    <span class="bento-stat__unit">+</span>
+                    <!-- Promise Carousel — cols 1–2, row 3 -->
+                    <article class="bento-cell bento-cell--stats" aria-label="Nuestras promesas">
+                        <div class="promise-carousel">
+                            <div class="promise-slide promise-slide--active" data-index="0">
+                                <div class="promise-icon">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <ellipse cx="12" cy="10" rx="4" ry="5.5" fill="currentColor" opacity="0.9"/>
+                                        <ellipse cx="28" cy="10" rx="4" ry="5.5" fill="currentColor" opacity="0.9"/>
+                                        <ellipse cx="6"  cy="21" rx="3.5" ry="4.5" fill="currentColor" opacity="0.7"/>
+                                        <ellipse cx="34" cy="21" rx="3.5" ry="4.5" fill="currentColor" opacity="0.7"/>
+                                        <path d="M20 35c-5 0-14-6-14-13 0-4 3-6 6-6 2 0 4 1 8 1s6-1 8-1c3 0 6 2 6 6 0 7-9 13-14 13z" fill="currentColor"/>
+                                    </svg>
                                 </div>
-                                <span class="bento-stat__label" data-i18n="products.bento.stats.products">Productos Premium</span>
+                                <p class="promise-title" data-i18n="products.bento.promise.quality.title">Selección Premium</p>
+                                <p class="promise-desc" data-i18n="products.bento.promise.quality.desc">Solo los mejores productos llegan a tu mascota</p>
                             </div>
-                            <div class="bento-stat-divider"></div>
-                            <div class="bento-stat">
-                                <div class="bento-stat__number">
-                                    <span class="bento-stat__num" data-target="4" data-decimal=".8">0</span>
-                                    <span class="bento-stat__unit">★</span>
+                            <div class="promise-slide" data-index="1">
+                                <div class="promise-icon">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M20 4L6 10v10c0 8.5 6 16.4 14 18.5C28 36.4 34 28.5 34 20V10L20 4z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                 </div>
-                                <span class="bento-stat__label" data-i18n="products.bento.stats.rating">Rating Amazon</span>
+                                <p class="promise-title" data-i18n="products.bento.promise.shipping.title">Envíos Seguros</p>
+                                <p class="promise-desc" data-i18n="products.bento.promise.shipping.desc">Tu pedido protegido de principio a fin</p>
                             </div>
-                            <div class="bento-stat-divider"></div>
-                            <div class="bento-stat">
-                                <div class="bento-stat__number">
-                                    <span class="bento-stat__num" data-target="100">0</span>
-                                    <span class="bento-stat__unit">%</span>
+                            <div class="promise-slide" data-index="2">
+                                <div class="promise-icon">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M20 34C20 34 6 25.5 6 16a7 7 0 0 1 14-1 7 7 0 0 1 14 1c0 9.5-14 18-14 18z" fill="currentColor" opacity="0.85"/>
+                                    </svg>
                                 </div>
-                                <span class="bento-stat__label" data-i18n="products.bento.stats.shipping">Envíos Seguros</span>
+                                <p class="promise-title" data-i18n="products.bento.promise.satisfaction.title">Satisfacción Garantizada</p>
+                                <p class="promise-desc" data-i18n="products.bento.promise.satisfaction.desc">Tu mascota feliz o te devolvemos tu dinero</p>
+                            </div>
+                            <div class="promise-dots" aria-hidden="true">
+                                <span class="promise-dot promise-dot--active"></span>
+                                <span class="promise-dot"></span>
+                                <span class="promise-dot"></span>
                             </div>
                         </div>
                     </article>

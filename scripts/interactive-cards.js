@@ -21,45 +21,48 @@
     }
 
     /* =============================================
-       Stats counters — animate when stats cell enters view
+       Promise Carousel — auto-rotate slides
        ============================================= */
-    var statsCell = document.querySelector('.bento-cell--stats');
-    if (statsCell) {
-        var countersStarted = false;
+    var promiseCarousel = document.querySelector('.promise-carousel');
+    if (promiseCarousel) {
+        var slides = promiseCarousel.querySelectorAll('.promise-slide');
+        var dots   = promiseCarousel.querySelectorAll('.promise-dot');
+        var current = 0;
+        var interval = null;
 
-        function animateCounter(el) {
-            var target = parseFloat(el.dataset.target) || 0;
-            var decimal = el.dataset.decimal || '';
-            var duration = 1400;
-            var start = null;
-
-            function step(timestamp) {
-                if (!start) start = timestamp;
-                var progress = Math.min((timestamp - start) / duration, 1);
-                // ease-out cubic
-                var eased = 1 - Math.pow(1 - progress, 3);
-                var current = Math.floor(eased * target);
-                el.textContent = current + decimal;
-                if (progress < 1) {
-                    requestAnimationFrame(step);
-                } else {
-                    el.textContent = target + decimal;
-                }
-            }
-            requestAnimationFrame(step);
+        function showSlide(index) {
+            slides[current].classList.remove('promise-slide--active');
+            dots[current].classList.remove('promise-dot--active');
+            current = index % slides.length;
+            slides[current].classList.add('promise-slide--active');
+            dots[current].classList.add('promise-dot--active');
         }
 
-        var statsObserver = new IntersectionObserver(function (entries) {
+        function startCarousel() {
+            interval = setInterval(function () {
+                showSlide(current + 1);
+            }, 3500);
+        }
+
+        // Pause on hover
+        promiseCarousel.addEventListener('mouseenter', function () {
+            clearInterval(interval);
+        });
+        promiseCarousel.addEventListener('mouseleave', function () {
+            startCarousel();
+        });
+
+        // Start only when in view
+        var carouselObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
-                if (entry.isIntersecting && !countersStarted) {
-                    countersStarted = true;
-                    statsCell.querySelectorAll('.bento-stat__num').forEach(animateCounter);
-                    statsObserver.unobserve(statsCell);
+                if (entry.isIntersecting) {
+                    startCarousel();
+                    carouselObserver.unobserve(promiseCarousel);
                 }
             });
         }, { threshold: 0.4 });
 
-        statsObserver.observe(statsCell);
+        carouselObserver.observe(promiseCarousel);
     }
 
     /* =============================================
