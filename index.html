@@ -358,72 +358,100 @@
             </div>
         </section>
 
-        <!-- Desafío Mental -->
-        <section class="more-products genius-challenge" id="mas-productos">
+        <!-- Tips de Estimulación Mental -->
+        <section class="more-products mental-tips" id="mas-productos">
             <div class="bouncing-ball bouncing-ball--1"></div>
             <div class="bouncing-ball bouncing-ball--2"></div>
             <div class="bouncing-ball bouncing-ball--3"></div>
             <div class="bouncing-ball bouncing-ball--4"></div>
             <div class="container">
-                <div class="genius-module">
+                <div class="section__header">
+                    <span class="section__badge">Estimulación Mental</span>
+                    <h2 class="section__title mental-tips__title">Tips de Estimulación Mental</h2>
+                    <p class="section__subtitle">Pequeños hábitos que marcan una gran diferencia en el bienestar de tu mascota.</p>
+                </div>
 
-                    <!-- Encabezado -->
-                    <div class="genius-module__header">
-                        <span class="section__badge">Estimulación Mental</span>
-                        <h2 class="genius-module__title">¿Es tu mascota un Genio Oculto?</h2>
-                        <p class="genius-module__subtitle">Ponte a prueba con el Desafío de Estimulación Mental de Argo's.</p>
+                <div class="mental-tips__grid">
+
+                    <!-- Card 1: Olfato -->
+                    <div class="tip-card" tabindex="0" aria-label="Tip de Olfato – pasa el cursor para ver el consejo">
+                        <div class="tip-card__inner">
+                            <div class="tip-card__front">
+                                <div class="tip-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="28" r="24" fill="rgba(82,183,136,0.12)" stroke="rgba(82,183,136,0.4)" stroke-width="1.5"/>
+                                        <ellipse cx="22" cy="26" rx="5" ry="3.5" fill="currentColor" opacity="0.85"/>
+                                        <ellipse cx="34" cy="26" rx="5" ry="3.5" fill="currentColor" opacity="0.85"/>
+                                        <path d="M28 30 C28 36 20 39 18 34" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+                                        <path d="M16 20 Q14 16 18 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/>
+                                        <path d="M24 18 Q24 13 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/>
+                                        <path d="M32 18 Q32 13 28 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/>
+                                        <path d="M40 20 Q42 16 38 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/>
+                                    </svg>
+                                </div>
+                                <span class="tip-card__category">Olfato</span>
+                                <h3 class="tip-card__title">Activa el instinto de búsqueda</h3>
+                                <span class="tip-card__hint">Pasa el cursor para ver el tip</span>
+                            </div>
+                            <div class="tip-card__back">
+                                <span class="tip-card__tag">Olfato · &lt;60 seg</span>
+                                <p class="tip-card__tip">Esconde snacks dentro del juguete para activar su instinto de búsqueda. <strong>5 minutos de olfato equivalen a 20 de caminata.</strong></p>
+                                <a href="https://www.amazon.com/dp/B0GT6RXS6J" target="_blank" rel="noopener noreferrer" class="tip-card__cta bento-btn bento-btn--sm">Ver producto relacionado →</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Escenario del juego -->
-                    <div class="genius-stage">
-
-                        <!-- Instrucción -->
-                        <p class="genius-instruction" id="genius-instruction">Sigue la golosina... ¡y haz clic donde creas que está!</p>
-
-                        <!-- Pista de cuencos -->
-                        <div class="cups-track" id="cups-track">
-                            <div class="cup-item" id="cup-item-0">
-                                <div class="treat" aria-hidden="true">🦴</div>
-                                <button class="cup" aria-label="Cuenco 1" disabled>
-                                    <div class="cup__base"></div>
-                                    <div class="cup__dome"></div>
-                                </button>
+                    <!-- Card 2: Paciencia -->
+                    <div class="tip-card" tabindex="0" aria-label="Tip de Paciencia – pasa el cursor para ver el consejo">
+                        <div class="tip-card__inner">
+                            <div class="tip-card__front">
+                                <div class="tip-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="28" r="24" fill="rgba(82,183,136,0.12)" stroke="rgba(82,183,136,0.4)" stroke-width="1.5"/>
+                                        <path d="M20 22 Q20 14 28 14 Q36 14 36 22 Q36 28 30 30 L30 34" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.9"/>
+                                        <path d="M24 30 Q22 34 26 36 Q30 38 32 34" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+                                        <circle cx="30" cy="38" r="2" fill="currentColor" opacity="0.85"/>
+                                        <path d="M22 20 Q24 17 28 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+                                    </svg>
+                                </div>
+                                <span class="tip-card__category">Paciencia</span>
+                                <h3 class="tip-card__title">Concentración y relajación</h3>
+                                <span class="tip-card__hint">Pasa el cursor para ver el tip</span>
                             </div>
-                            <div class="cup-item" id="cup-item-1">
-                                <div class="treat" aria-hidden="true">🦴</div>
-                                <button class="cup" aria-label="Cuenco 2" disabled>
-                                    <div class="cup__base"></div>
-                                    <div class="cup__dome"></div>
-                                </button>
-                            </div>
-                            <div class="cup-item" id="cup-item-2">
-                                <div class="treat" aria-hidden="true">🦴</div>
-                                <button class="cup" aria-label="Cuenco 3" disabled>
-                                    <div class="cup__base"></div>
-                                    <div class="cup__dome"></div>
-                                </button>
+                            <div class="tip-card__back">
+                                <span class="tip-card__tag">Paciencia · &lt;60 seg</span>
+                                <p class="tip-card__tip">Usa el bebedero portátil congelado con yogurt natural. <strong>Mantendrá a tu mascota concentrada y relajada por más tiempo.</strong></p>
+                                <a href="https://www.amazon.com/dp/B0GTBTQ77H" target="_blank" rel="noopener noreferrer" class="tip-card__cta bento-btn bento-btn--sm">Ver producto relacionado →</a>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Botón CTA principal -->
-                        <div class="genius-cta-wrapper" id="genius-cta-wrapper">
-                            <button class="genius-play-btn" id="genius-play-btn" type="button">
-                                ¡Encuentra el Premio y Desbloquea su Potencial!
-                            </button>
+                    <!-- Card 3: Agilidad -->
+                    <div class="tip-card" tabindex="0" aria-label="Tip de Agilidad – pasa el cursor para ver el consejo">
+                        <div class="tip-card__inner">
+                            <div class="tip-card__front">
+                                <div class="tip-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="28" r="24" fill="rgba(82,183,136,0.12)" stroke="rgba(82,183,136,0.4)" stroke-width="1.5"/>
+                                        <path d="M20 36 L26 22 L32 30 L36 24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+                                        <circle cx="36" cy="22" r="3" fill="currentColor" opacity="0.85"/>
+                                        <path d="M16 36 L40 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                                        <path d="M22 32 L24 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                                    </svg>
+                                </div>
+                                <span class="tip-card__category">Agilidad</span>
+                                <h3 class="tip-card__title">Quema energía mental en casa</h3>
+                                <span class="tip-card__hint">Pasa el cursor para ver el tip</span>
+                            </div>
+                            <div class="tip-card__back">
+                                <span class="tip-card__tag">Agilidad · &lt;60 seg</span>
+                                <p class="tip-card__tip">Crea un mini circuito en casa usando la correa como meta. <strong>Refuerza el vínculo y quema energía mental sin salir.</strong></p>
+                                <a href="https://www.amazon.com/dp/B0GT6RXS6J" target="_blank" rel="noopener noreferrer" class="tip-card__cta bento-btn bento-btn--sm">Ver producto relacionado →</a>
+                            </div>
                         </div>
+                    </div>
 
-                        <!-- Panel de resultado -->
-                        <div class="genius-result" id="genius-result" hidden>
-                            <span class="genius-result__icon" id="genius-result-icon" aria-hidden="true">🎉</span>
-                            <p class="genius-result__text" id="genius-result-text">¡Correcto! Tu mascota tiene una mente afilada.</p>
-                            <p class="genius-result__sub">Aprende cómo mantenerla así.</p>
-                            <a href="#contact-us" class="genius-result__link">Conoce nuestros productos de estimulación →</a>
-                            <button class="genius-replay-btn" id="genius-replay-btn" type="button">↺ Jugar de nuevo</button>
-                        </div>
-
-                    </div><!-- /genius-stage -->
-
-                </div><!-- /genius-module -->
+                </div><!-- /mental-tips__grid -->
             </div>
         </section>
 
