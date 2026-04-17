@@ -104,6 +104,20 @@
       "cta": {
         "headline": "Más productos esperándote",
         "btn": "Explorar catálogo"
+      },
+      "promise": {
+        "quality": {
+          "title": "Selección Premium",
+          "desc": "Solo los mejores productos llegan a tu mascota"
+        },
+        "shipping": {
+          "title": "Envíos Seguros",
+          "desc": "Tu pedido protegido de principio a fin"
+        },
+        "satisfaction": {
+          "title": "Satisfacción Garantizada",
+          "desc": "Tu mascota feliz o te devolvemos tu dinero"
+        }
       }
     },
     "items": {
@@ -297,6 +311,34 @@
         "Fácil mantenimiento",
         "Múltiples tamaños disponibles"
       ]
+    }
+  },
+  "mentalTips": {
+    "badge": "Estimulación Mental",
+    "title": "Tips de Estimulación Mental",
+    "subtitle": "Pequeños hábitos que marcan una gran diferencia en el bienestar de tu mascota.",
+    "hint": "Pasa el cursor para ver el tip",
+    "ctaBtn": "Ver producto relacionado →",
+    "smell": {
+      "ariaLabel": "Tip de Olfato – pasa el cursor para ver el consejo",
+      "category": "Olfato",
+      "title": "Activa el instinto de búsqueda",
+      "tag": "Olfato · <60 seg",
+      "tip": "Esconde snacks dentro del juguete para activar su instinto de búsqueda. <strong>5 minutos de olfato equivalen a 20 de caminata.</strong>"
+    },
+    "patience": {
+      "ariaLabel": "Tip de Paciencia – pasa el cursor para ver el consejo",
+      "category": "Paciencia",
+      "title": "Concentración y relajación",
+      "tag": "Paciencia · <60 seg",
+      "tip": "Usa el bebedero portátil congelado con yogurt natural. <strong>Mantendrá a tu mascota concentrada y relajada por más tiempo.</strong>"
+    },
+    "agility": {
+      "ariaLabel": "Tip de Agilidad – pasa el cursor para ver el consejo",
+      "category": "Agilidad",
+      "title": "Quema energía mental en casa",
+      "tag": "Agilidad · <60 seg",
+      "tip": "Crea un mini circuito en casa usando la correa como meta. <strong>Refuerza el vínculo y quema energía mental sin salir.</strong>"
     }
   },
   "contact": {

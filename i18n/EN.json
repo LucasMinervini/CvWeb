@@ -104,6 +104,20 @@
       "cta": {
         "headline": "More products waiting for you",
         "btn": "Explore catalog"
+      },
+      "promise": {
+        "quality": {
+          "title": "Premium Selection",
+          "desc": "Only the best products reach your pet"
+        },
+        "shipping": {
+          "title": "Safe Shipping",
+          "desc": "Your order protected from start to finish"
+        },
+        "satisfaction": {
+          "title": "Guaranteed Satisfaction",
+          "desc": "Your happy pet or your money back"
+        }
       }
     },
     "items": {
@@ -297,6 +311,34 @@
         "Easy-clean technology",
         "Multiple size options"
       ]
+    }
+  },
+  "mentalTips": {
+    "badge": "Mental Stimulation",
+    "title": "Mental Stimulation Tips",
+    "subtitle": "Small habits that make a big difference in your pet's well-being.",
+    "hint": "Hover to see the tip",
+    "ctaBtn": "View related product →",
+    "smell": {
+      "ariaLabel": "Scent Tip – hover to see the advice",
+      "category": "Scent",
+      "title": "Activate the foraging instinct",
+      "tag": "Scent · <60 sec",
+      "tip": "Hide snacks inside the toy to trigger their foraging instinct. <strong>5 minutes of scent work equals 20 minutes of walking.</strong>"
+    },
+    "patience": {
+      "ariaLabel": "Patience Tip – hover to see the advice",
+      "category": "Patience",
+      "title": "Focus and relaxation",
+      "tag": "Patience · <60 sec",
+      "tip": "Use the portable water bottle frozen with natural yogurt. <strong>It will keep your pet focused and calm for longer.</strong>"
+    },
+    "agility": {
+      "ariaLabel": "Agility Tip – hover to see the advice",
+      "category": "Agility",
+      "title": "Burn mental energy at home",
+      "tag": "Agility · <60 sec",
+      "tip": "Create a mini circuit at home using the leash as a goal marker. <strong>Strengthens the bond and burns mental energy without leaving the house.</strong>"
     }
   },
   "contact": {
