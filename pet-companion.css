@@ -1,0 +1,215 @@
+/* ============================================
+   Módulo: Tips de Estimulación Mental
+   ============================================ */
+
+/* ---- Section wrapper ---- */
+.mental-tips {
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+}
+
+.mental-tips__title {
+    color: var(--color-white);
+}
+
+/* ---- 3-column responsive grid ---- */
+.mental-tips__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+/* ---- Flip card container ---- */
+.tip-card {
+    perspective: 1000px;
+    min-height: 320px;
+    cursor: pointer;
+    outline: none;
+}
+
+.tip-card:focus-visible .tip-card__inner {
+    box-shadow:
+        0 0 0 2px var(--color-accent),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Inner wrapper – rotates on hover / focus ---- */
+.tip-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.35s ease;
+    border-radius: var(--border-radius-xl);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.tip-card:hover .tip-card__inner,
+.tip-card:focus-visible .tip-card__inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55),
+                0 0 40px rgba(82, 183, 136, 0.18);
+}
+
+/* ---- Shared face styles ---- */
+.tip-card__front,
+.tip-card__back {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius-xl);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ---- Front face ---- */
+.tip-card__front {
+    background: rgba(13, 40, 24, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+.tip-card__front::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(82, 183, 136, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ---- Front icon ---- */
+.tip-card__icon {
+    width: 72px;
+    height: 72px;
+    color: var(--color-accent-light);
+    margin-bottom: var(--spacing-xs);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tip-card:hover .tip-card__icon {
+    transform: scale(1.08);
+}
+
+/* ---- Front text ---- */
+.tip-card__category {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.tip-card__title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.tip-card__hint {
+    font-size: var(--font-size-sm);
+    color: rgba(149, 213, 178, 0.5);
+    letter-spacing: 0.02em;
+    margin-top: auto;
+    padding-top: var(--spacing-xs);
+}
+
+/* ---- Back face ---- */
+.tip-card__back {
+    background: linear-gradient(145deg,
+        rgba(26, 77, 46, 0.92) 0%,
+        rgba(13, 40, 24, 0.97) 100%);
+    border: 1px solid rgba(82, 183, 136, 0.45);
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-xl);
+}
+
+.tip-card__back::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+}
+
+/* ---- Back tag ---- */
+.tip-card__tag {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    background: rgba(82, 183, 136, 0.12);
+    border: 1px solid rgba(82, 183, 136, 0.3);
+    border-radius: 2rem;
+    padding: 0.25rem 0.85rem;
+}
+
+/* ---- Tip text ---- */
+.tip-card__tip {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.tip-card__tip strong {
+    color: var(--color-accent-light);
+    font-weight: 700;
+}
+
+/* ---- CTA button (reuses bento-btn--sm from products.css) ---- */
+.tip-card__cta {
+    display: inline-block;
+    margin-top: auto;
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* ---- Responsive: stack on mobile ---- */
+@media (max-width: 900px) {
+    .mental-tips__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .mental-tips__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .tip-card__inner,
+    .tip-card {
+        min-height: 280px;
+    }
+
+    /* On touch devices, show back face permanently via a toggled class,
+       as hover doesn't exist on mobile. JS adds .is-flipped on tap. */
+    .tip-card.is-flipped .tip-card__inner {
+        transform: rotateY(180deg);
+    }
+
+    .tip-card__hint {
+        display: none;
+    }
+}

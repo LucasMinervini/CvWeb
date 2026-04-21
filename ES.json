@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "title": "ARGO'S PACK - Productos Premium para Mascotas",
+    "description": "ARGO'S PACK - Productos premium para el cuidado y bienestar de tu mascota. Descubre nuestra línea de productos diseñados con amor para tu compañero fiel.",
+    "ogTitle": "ARGO'S PACK - Productos Premium para Mascotas",
+    "ogDescription": "Productos premium para el cuidado y bienestar de tu mascota. Descubre nuestra línea de productos diseñados con amor para tu compañero fiel."
+  },
+  "nav": {
+    "home": "🏠 Inicio",
+    "products": "🦴 Productos",
+    "benefits": "✨ Beneficios",
+    "testimonials": "💬 Testimonios",
+    "contact": "📞 Contacto"
+  },
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés",
+    "selectLabel": "Seleccionar idioma"
+  },
+  "hero": {
+    "badge": "Premium Pet Products",
+    "titleHighlight": "Cuidamos",
+    "titleRest": "a tu mejor amigo",
+    "titleWith": "con productos",
+    "titleAccent": "premium",
+    "description": "En ARGO'S PACK creemos que cada mascota merece lo mejor. Nuestros productos están diseñados con dedicación y calidad superior para garantizar el bienestar, comodidad y felicidad de tu compañero fiel.",
+    "ctaPrimary": "Explorar Productos",
+    "ctaSecondary": "Conocer Más",
+    "imageAlt": "Mascota feliz con productos ARGO'S PACK"
+  },
+  "benefits": {
+    "badge": "🐶 Nuestros Valores",
+    "title": "¿Por qué elegir ARGO'S PACK? 🐾",
+    "quality": {
+      "title": "Calidad Premium",
+      "description": "Productos seleccionados y probados para garantizar la máxima calidad y durabilidad."
+    },
+    "love": {
+      "title": "Hecho con Amor",
+      "description": "Cada producto está diseñado pensando en el bienestar y la felicidad de tu mascota."
+    },
+    "innovation": {
+      "title": "Innovación",
+      "description": "Incorporamos las últimas tendencias y tecnologías en productos para mascotas."
+    },
+    "safety": {
+      "title": "Seguridad",
+      "description": "Todos nuestros productos cumplen con los más altos estándares de seguridad y calidad."
+    }
+  },
+  "products": {
+    "badge": "Catálogo Premium",
+    "title": "Nuestros Productos",
+    "subtitle": "Descubre nuestra línea completa de productos diseñados para el cuidado de tu mascota",
+    "buyButton": "COMPRAR",
+    "discoverButton": "COMPRAR",
+    "viewMeasures": "COMPRAR",
+    "customizeKit": "COMPRAR",
+    "chooseModel": "COMPRAR",
+    "viewCollection": "COMPRAR",
+    "exploreLine": "COMPRAR",
+    "bento": {
+      "doubleLeash": {
+        "title": "Correa Doble Premium",
+        "desc": "Diseñada para pasear a dos perros al mismo tiempo. Mecanismo giratorio anti enredo y ganchos metálicos reforzados.",
+        "buyBtn": "COMPRAR EN AMAZON"
+      },
+      "simpleLeash": {
+        "title": "Correa Simple",
+        "features": [
+          "Cinta resistente y duradera",
+          "Gancho de seguridad metálico",
+          "Mango ergonómico"
+        ],
+        "buyBtn": "COMPRAR"
+      },
+      "petCup": {
+        "title": "Pet Cup Portátil",
+        "desc": "Diseño 2 en 1: botella y bebedero integrado. Sistema antiderrame para paseos y viajes.",
+        "features": [
+          "Sistema antiderrame",
+          "Materiales seguros",
+          "Fácil de transportar"
+        ],
+        "buyBtn": "COMPRAR"
+      },
+      "groomingComb": {
+        "title": "Peine Removedor",
+        "features": [
+          "Reduce caída de pelo",
+          "Ideal para pelo largo",
+          "Mango antideslizante"
+        ],
+        "buyBtn": "COMPRAR"
+      },
+      "stats": {
+        "products": "Productos Premium",
+        "rating": "Rating Amazon",
+        "shipping": "Envíos Seguros"
+      },
+      "tickTweezers": {
+        "title": "Pinza Quitagarrapatas (Próximamente...)"
+      },
+      "cta": {
+        "headline": "Más productos esperándote",
+        "btn": "Explorar catálogo"
+      },
+      "promise": {
+        "quality": {
+          "title": "Selección Premium",
+          "desc": "Solo los mejores productos llegan a tu mascota"
+        },
+        "shipping": {
+          "title": "Envíos Seguros",
+          "desc": "Tu pedido protegido de principio a fin"
+        },
+        "satisfaction": {
+          "title": "Satisfacción Garantizada",
+          "desc": "Tu mascota feliz o te devolvemos tu dinero"
+        }
+      }
+    },
+    "items": {
+      "leashBlack": {
+        "name": "Correa Retráctil Premium - Negra",
+        "subtitle": "Diseño ergonómico con acentos verde lima vibrantes para paseos cómodos y seguros.",
+        "features": [
+          "Diseño ergonómico con mango cómodo",
+          "Acentos verde lima vibrantes",
+          "Mecanismo de bloqueo seguro",
+          "Incluye accesorio circular con logo ARGO'S PACK",
+          "Gancho metálico resistente"
+        ]
+      },
+      "leashWhite": {
+        "name": "Correa Retráctil Premium - Blanca",
+        "subtitle": "Diseño moderno en blanco y lavanda con estilo elegante y funcional.",
+        "features": [
+          "Diseño moderno en blanco y lavanda",
+          "Mango ergonómico con textura antideslizante",
+          "Botón de bloqueo fácil de usar",
+          "Gancho metálico plateado de alta calidad",
+          "Estilo elegante y funcional"
+        ]
+      },
+      "toys": {
+        "name": "Juguetes Interactivos",
+        "subtitle": "Colección multisensorial para retar su inteligencia y liberar energía.",
+        "features": [
+          "Texturas y sonidos enriquecidos",
+          "Materiales seguros y lavables",
+          "Pack con 3 niveles de dificultad"
+        ]
+      },
+      "beds": {
+        "name": "Camas Premium",
+        "subtitle": "Descanso ortopédico con soporte envolvente y telas respirables.",
+        "features": [
+          "Espuma memory viscoelástica",
+          "Fundas removibles anti manchas",
+          "Bordes reforzados y antidesgarro"
+        ]
+      },
+      "training": {
+        "name": "Accesorios de Entrenamiento",
+        "subtitle": "Herramientas positivas para rutinas urbanas y sesiones guiadas.",
+        "features": [
+          "Clickers y arneses regulables",
+          "Materiales pro antideslizantes",
+          "Guía digital con rutinas"
+        ]
+      },
+      "feeders": {
+        "name": "Comedores Premium",
+        "subtitle": "Set ergonómico con bowls elevados y acabados fáciles de limpiar.",
+        "features": [
+          "Alturas ajustadas por talla",
+          "Bases antideslizantes 360°",
+          "Doble bowl en acero quirúrgico"
+        ]
+      },
+      "clothing": {
+        "name": "Ropa y Accesorios",
+        "subtitle": "Diseños modernos y cómodos para todas las ocasiones.",
+        "features": [
+          "Telas de calidad premium",
+          "Diseños modernos y funcionales",
+          "Variedad de tallas disponibles"
+        ]
+      },
+      "hygiene": {
+        "name": "Higiene y Cuidado",
+        "subtitle": "Productos naturales para el cuidado y bienestar de tu mascota.",
+        "features": [
+          "Productos naturales y seguros",
+          "Suaves con la piel sensible",
+          "Fórmulas especializadas"
+        ]
+      },
+      "carrier": {
+        "name": "Transportador Expandible Premium",
+        "description": "Transportador para gatos, perros pequeños y mascotas hasta 20lbs con luz LED interior recargable. Aprobado para aerolíneas TSA. Paredes laterales expandibles, 4 puertas y almohadilla removible.",
+        "benefits": [
+          "Paredes laterales expandibles",
+          "Luz LED interior recargable",
+          "Aprobado para aerolíneas TSA",
+          "4 puertas de acceso",
+          "Almohadilla removible y lavable",
+          "Ideal para mascotas hasta 20lbs"
+        ]
+      },
+      "feeders2": {
+        "name": "Comedores y Bebederos",
+        "subtitle": "Set ergonómico con bowls elevados y acabados fáciles de limpiar.",
+        "features": [
+          "Materiales no tóxicos",
+          "Diseño antideslizante",
+          "Fácil mantenimiento",
+          "Diferentes capacidades"
+        ]
+      },
+      "hygiene2": {
+        "name": "Higiene y Cuidado",
+        "subtitle": "Productos naturales para el cuidado y bienestar de tu mascota.",
+        "features": [
+          "Productos naturales",
+          "Suaves con la piel",
+          "Efectivos y seguros",
+          "Fórmulas especializadas"
+        ]
+      },
+      "clothing2": {
+        "name": "Ropa y Accesorios",
+        "subtitle": "Diseños modernos y cómodos para todas las ocasiones.",
+        "features": [
+          "Telas de calidad",
+          "Diseños modernos",
+          "Variedad de tallas",
+          "Confort garantizado"
+        ]
+      },
+      "travel": {
+        "name": "Transporte y Viaje",
+        "subtitle": "Soluciones seguras y cómodas para viajar con tu mascota.",
+        "features": [
+          "Transportadores aprobados TSA",
+          "Diseño ergonómico y seguro",
+          "Fácil de limpiar y mantener",
+          "Múltiples tamaños disponibles"
+        ]
+      },
+      "health": {
+        "name": "Salud y Bienestar",
+        "subtitle": "Productos especializados para mantener a tu mascota saludable y feliz.",
+        "features": [
+          "Productos veterinarios aprobados",
+          "Fórmulas naturales y seguras",
+          "Promueven el bienestar integral",
+          "Resultados comprobados"
+        ]
+      },
+      "safety": {
+        "name": "Seguridad y Protección",
+        "subtitle": "Equipamiento de seguridad para proteger a tu mascota en todo momento.",
+        "features": [
+          "Arneses de seguridad certificados",
+          "Placas de identificación personalizadas",
+          "Reflectores para visibilidad nocturna",
+          "Materiales resistentes y duraderos"
+        ]
+      },
+      "entertainment": {
+        "name": "Entretenimiento",
+        "subtitle": "Juguetes y actividades para mantener a tu mascota activa y entretenida.",
+        "features": [
+          "Juguetes interactivos inteligentes",
+          "Actividades para estimulación mental",
+          "Diseños seguros y duraderos",
+          "Para todas las edades y tamaños"
+        ]
+      },
+      "grooming": {
+        "name": "Aseo y Cuidado",
+        "subtitle": "Herramientas profesionales para mantener a tu mascota limpia y saludable.",
+        "features": [
+          "Kits de aseo completos",
+          "Productos de higiene premium",
+          "Herramientas profesionales",
+          "Cuidado integral y seguro"
+        ]
+      }
+    }
+  },
+  "moreProducts": {
+    "badge": "Más Productos",
+    "title": "Descubre nuestra línea completa",
+    "toys": {
+      "name": "Juguetes Interactivos",
+      "benefits": [
+        "Estimulación mental y física",
+        "Materiales seguros y duraderos",
+        "Diseños innovadores",
+        "Para todas las edades"
+      ]
+    },
+    "beds": {
+      "name": "Camas Premium",
+      "benefits": [
+        "Materiales hipoalergénicos",
+        "Diseño ortopédico",
+        "Fácil mantenimiento",
+        "Múltiples tamaños disponibles"
+      ]
+    }
+  },
+  "mentalTips": {
+    "badge": "Estimulación Mental",
+    "title": "Tips de Estimulación Mental",
+    "subtitle": "Pequeños hábitos que marcan una gran diferencia en el bienestar de tu mascota.",
+    "hint": "Pasa el cursor para ver el tip",
+    "ctaBtn": "Ver producto relacionado →",
+    "smell": {
+      "ariaLabel": "Tip de Olfato – pasa el cursor para ver el consejo",
+      "category": "Olfato",
+      "title": "Activa el instinto de búsqueda",
+      "tag": "Olfato · <60 seg",
+      "tip": "Esconde snacks dentro del juguete para activar su instinto de búsqueda. <strong>5 minutos de olfato equivalen a 20 de caminata.</strong>"
+    },
+    "patience": {
+      "ariaLabel": "Tip de Paciencia – pasa el cursor para ver el consejo",
+      "category": "Paciencia",
+      "title": "Concentración y relajación",
+      "tag": "Paciencia · <60 seg",
+      "tip": "Usa el bebedero portátil congelado con yogurt natural. <strong>Mantendrá a tu mascota concentrada y relajada por más tiempo.</strong>"
+    },
+    "agility": {
+      "ariaLabel": "Tip de Agilidad – pasa el cursor para ver el consejo",
+      "category": "Agilidad",
+      "title": "Quema energía mental en casa",
+      "tag": "Agilidad · <60 seg",
+      "tip": "Crea un mini circuito en casa usando la correa como meta. <strong>Refuerza el vínculo y quema energía mental sin salir.</strong>"
+    }
+  },
+  "contact": {
+    "badge": "🐾 Contáctanos",
+    "title": "¿Tienes alguna consulta?",
+    "subtitle": "Envíanos un mensaje y te responderemos a la brevedad.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "success": "Se abrirá WhatsApp para que puedas enviar el mensaje. ¡Gracias por contactarnos!",
+      "validation": "Completá todos los campos antes de enviar tu mensaje.",
+      "subject": "Mensaje de Contacto desde ARGO'S PACK"
+    }
+  },
+  "footer": {
+    "tagline": "Productos que hacen la vida de tu mascota más cómoda y feliz.",
+    "links": {
+      "title": "🔗 Enlaces",
+      "home": "🏠 Inicio",
+      "products": "🦴 Productos",
+      "benefits": "✨ Beneficios",
+      "testimonials": "💬 Testimonios"
+    },
+    "contact": {
+      "title": "Contacto"
+    },
+    "legal": {
+      "title": "⚖️ Legal",
+      "privacy": "🛡️ Política de Privacidad",
+      "terms": "📜 Términos y Condiciones"
+    },
+    "copyright": "© 2024 ARGO'S PACK. Todos los derechos reservados."
+  },
+  "lightbox": {
+    "close": "Cerrar imagen",
+    "imageAlt": "Imagen ampliada"
+  },
+  "aria": {
+    "toggleMenu": "Abrir/Cerrar menú de navegación",
+    "whatsapp": "Chatear por WhatsApp",
+    "carrierView1": "Vista principal del producto",
+    "carrierView2": "Vista lateral del producto",
+    "carrierView3": "Vista expandida del producto",
+    "carrierView4": "Vista de dimensiones",
+    "carrierView5": "Vista superior",
+    "carrierView6": "Vista de detalles"
+  }
+}
+
+
+
+
+

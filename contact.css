@@ -1,0 +1,100 @@
+/* ============================================
+   Sección de Contacto
+   ============================================ */
+
+.contact {
+    padding: var(--spacing-2xl) 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Completamente transparente para que se vea el fondo al 100% */
+    background: transparent;
+    opacity: 0;
+    z-index: 0;
+    animation: none;
+    will-change: auto;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Completamente transparente para que se vea el fondo al 100% */
+    background: transparent;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    animation: none;
+    will-change: auto;
+}
+
+.contact__form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(13, 40, 24, 0.82);
+    backdrop-filter: blur(6px);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(82, 183, 136, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.contact__form {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: rgba(10, 15, 11, 0.5);
+    border: 1px solid rgba(82, 183, 136, 0.3);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(82, 183, 136, 0.5);
+}
+
+.form__label {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    color: var(--color-gray);
+    pointer-events: none;
+    transition: all var(--transition-base);
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    top: -0.75rem;
+    left: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-light);
+    background: var(--color-primary-dark);
+    padding: 0 0.5rem;
+}
+

@@ -1,0 +1,140 @@
+/* ============================================
+   Botones
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    font-size: var(--font-size-base);
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn--primary:hover::before {
+    left: 100%;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 20px rgba(82, 183, 136, 0.4),
+        0 0 30px rgba(82, 183, 136, 0.2);
+}
+
+.btn--primary:active {
+    transform: translateY(0);
+    box-shadow:
+        0 4px 10px rgba(82, 183, 136, 0.35),
+        0 0 18px rgba(82, 183, 136, 0.25);
+}
+
+.btn--secondary:active,
+.btn--cta:active {
+    transform: translateY(0);
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: 3px;
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-white);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn--secondary:hover::before {
+    width: 100%;
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 20px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.btn--cta {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85rem;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+    z-index: 2;
+}
+
+.product__card--gallery .btn--cta {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-md);
+}
+
+.btn--cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn--cta:hover::before {
+    left: 100%;
+}
+
+.btn--cta:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 30px rgba(82, 183, 136, 0.5),
+        0 0 40px rgba(82, 183, 136, 0.3);
+}
+

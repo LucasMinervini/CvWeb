@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "title": "ARGO'S PACK - Premium Pet Essentials",
+    "description": "ARGO'S PACK - Premium products dedicated to your pet's wellness and comfort. Discover our exclusive line, crafted with love for your most faithful companion.",
+    "ogTitle": "ARGO'S PACK - Premium Pet Essentials",
+    "ogDescription": "Premium products dedicated to your pet's wellness and comfort. Discover our exclusive line, crafted with love for your most faithful companion."
+  },
+  "nav": {
+    "home": "🏠 Home",
+    "products": "🦴 Products",
+    "benefits": "✨ Benefits",
+    "testimonials": "💬 Testimonials",
+    "contact": "📞 Contact"
+  },
+  "language": {
+    "spanish": "Spanish",
+    "english": "English",
+    "selectLabel": "Select language"
+  },
+  "hero": {
+    "badge": "Premium Pet Essentials",
+    "titleHighlight": "Caring for",
+    "titleRest": "your best friend",
+    "titleWith": "with",
+    "titleAccent": "premium quality",
+    "description": "At ARGO'S PACK, we believe every pet deserves the very best. Our products are meticulously crafted with superior quality to ensure the wellness, comfort, and joy of your loyal companion.",
+    "ctaPrimary": "Explore Collection",
+    "ctaSecondary": "Our Story",
+    "imageAlt": "Happy pet enjoying ARGO'S PACK products"
+  },
+  "benefits": {
+    "badge": "🐶 Our Values",
+    "title": "Why ARGO'S PACK? 🐾",
+    "quality": {
+      "title": "Premium Quality",
+      "description": "Sourced and rigorously tested to guarantee maximum durability and long-lasting quality."
+    },
+    "love": {
+      "title": "Crafted with Love",
+      "description": "Every item is designed with your pet's happiness and ultimate well-being in mind."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "We blend the latest trends with cutting-edge technology for superior pet care."
+    },
+    "safety": {
+      "title": "Uncompromising Safety",
+      "description": "All our products adhere to the strictest safety and quality standards."
+    }
+  },
+  "products": {
+    "badge": "Premium Catalog",
+    "title": "Our Signature Collection",
+    "subtitle": "Explore our full range of essentials designed for the modern pet",
+    "buyButton": "COMPRAR",
+    "discoverButton": "COMPRAR",
+    "viewMeasures": "COMPRAR",
+    "customizeKit": "COMPRAR",
+    "chooseModel": "COMPRAR",
+    "viewCollection": "COMPRAR",
+    "exploreLine": "COMPRAR",
+    "bento": {
+      "doubleLeash": {
+        "title": "Double Leash Premium",
+        "desc": "Designed to walk two dogs at once. Anti-tangle swivel mechanism and reinforced metal clips.",
+        "buyBtn": "BUY ON AMAZON"
+      },
+      "simpleLeash": {
+        "title": "Simple Leash",
+        "features": [
+          "Durable, long-lasting strap",
+          "Metal safety clip",
+          "Ergonomic handle"
+        ],
+        "buyBtn": "BUY"
+      },
+      "petCup": {
+        "title": "Portable Pet Cup",
+        "desc": "2-in-1 design: bottle and integrated drinker. Leak-proof system for walks and travel.",
+        "features": [
+          "Leak-proof system",
+          "Safe materials",
+          "Easy to carry"
+        ],
+        "buyBtn": "BUY"
+      },
+      "groomingComb": {
+        "title": "Hair Removal Comb",
+        "features": [
+          "Reduces shedding",
+          "Ideal for long coats",
+          "Non-slip handle"
+        ],
+        "buyBtn": "BUY"
+      },
+      "stats": {
+        "products": "Premium Products",
+        "rating": "Amazon Rating",
+        "shipping": "Safe Shipping"
+      },
+      "tickTweezers": {
+        "title": "Tick Tweezers (Coming Soon...)"
+      },
+      "cta": {
+        "headline": "More products waiting for you",
+        "btn": "Explore catalog"
+      },
+      "promise": {
+        "quality": {
+          "title": "Premium Selection",
+          "desc": "Only the best products reach your pet"
+        },
+        "shipping": {
+          "title": "Safe Shipping",
+          "desc": "Your order protected from start to finish"
+        },
+        "satisfaction": {
+          "title": "Guaranteed Satisfaction",
+          "desc": "Your happy pet or your money back"
+        }
+      }
+    },
+    "items": {
+      "leashBlack": {
+        "name": "Premium Retractable Leash - Midnight Edition",
+        "subtitle": "Ergonomic design with vibrant lime-green accents for effortless and secure walks.",
+        "features": [
+          "Ergonomic comfort-grip handle",
+          "High-visibility lime accents",
+          "Advanced secure-lock mechanism",
+          "Exclusive ARGO'S PACK logo charm",
+          "Heavy-duty metal hardware"
+        ]
+      },
+      "leashWhite": {
+        "name": "Premium Retractable Leash - Ivory Edition",
+        "subtitle": "Sophisticated white and lavender design blending elegance with daily functionality.",
+        "features": [
+          "Modern Ivory & Lavender aesthetic",
+          "Ergonomic non-slip textured grip",
+          "Intuitive one-touch lock button",
+          "Premium silver-finish hardware",
+          "Elegant yet durable construction"
+        ]
+      },
+      "toys": {
+        "name": "Interactive Play Collection",
+        "subtitle": "A multisensory experience to challenge intelligence and channel energy.",
+        "features": [
+          "Rich textures and engaging sounds",
+          "Pet-safe, washable materials",
+          "Set features 3 progressive levels"
+        ]
+      },
+      "beds": {
+        "name": "Orthopedic Comfort Beds",
+        "subtitle": "Superior orthopedic support with breathable, premium fabrics.",
+        "features": [
+          "High-density Memory Foam",
+          "Removable, stain-resistant covers",
+          "Reinforced, tear-resistant edges"
+        ]
+      },
+      "training": {
+        "name": "Pro Training Gear",
+        "subtitle": "Positive reinforcement tools for urban routines and guided training.",
+        "features": [
+          "Adjustable harnesses and clickers",
+          "Professional-grade non-slip materials",
+          "Digital training guide included"
+        ]
+      },
+      "feeders": {
+        "name": "Elevated Dining Sets",
+        "subtitle": "Ergonomic design with elevated bowls and sleek, easy-clean finishes.",
+        "features": [
+          "Size-optimized heights",
+          "360° non-slip stability base",
+          "Double surgical-grade steel bowls"
+        ]
+      },
+      "clothing": {
+        "name": "Pet Apparel & Accessories",
+        "subtitle": "Modern, comfortable designs tailored for every occasion.",
+        "features": [
+          "Premium-grade textiles",
+          "Functional and trendy designs",
+          "Wide range of sizes available"
+        ]
+      },
+      "hygiene": {
+        "name": "Natural Wellness & Care",
+        "subtitle": "Pure, natural products dedicated to your pet's hygiene and skin health.",
+        "features": [
+          "100% safe and natural ingredients",
+          "Gentle for sensitive skin",
+          "Specialized care formulas"
+        ]
+      },
+      "carrier": {
+        "name": "Premium Expandable Travel Carrier",
+        "description": "Versatile carrier for cats and small dogs (up to 20lbs) with rechargeable LED light. TSA Airline Approved. Featuring expandable walls, 4 entry points, and plush washable padding.",
+        "benefits": [
+          "Dual expandable side walls",
+          "Integrated rechargeable LED light",
+          "TSA Airline Approved design",
+          "4 easy-access entry doors",
+          "Plush, washable comfort pad",
+          "Supports pets up to 20lbs"
+        ]
+      },
+      "feeders2": {
+        "name": "Feeders & Hydration",
+        "subtitle": "Ergonomic sets with elevated bowls and effortless maintenance.",
+        "features": [
+          "BPA-free, non-toxic materials",
+          "Enhanced non-slip design",
+          "Low-maintenance surfaces",
+          "Available in various capacities"
+        ]
+      },
+      "hygiene2": {
+        "name": "Hygiene & Daily Care",
+        "subtitle": "Holistic products for your pet's daily wellness routine.",
+        "features": [
+          "Natural, eco-friendly products",
+          "Skin-soothing formulas",
+          "Proven effective and safe",
+          "Expertly crafted formulas"
+        ]
+      },
+      "clothing2": {
+        "name": "Apparel & Style",
+        "subtitle": "Chic and comfortable designs for the fashion-forward pet.",
+        "features": [
+          "High-quality durable fabrics",
+          "Contemporary style designs",
+          "Comprehensive size chart",
+          "Unmatched daily comfort"
+        ]
+      },
+      "travel": {
+        "name": "Travel & Exploration",
+        "subtitle": "Secure and comfortable solutions for every journey with your pet.",
+        "features": [
+          "TSA-compliant carriers",
+          "Ergonomic, safety-first design",
+          "Easy-clean, durable materials",
+          "Multiple sizes for the perfect fit"
+        ]
+      },
+      "health": {
+        "name": "Health & Vitality",
+        "subtitle": "Specialized products to keep your pet thriving and happy.",
+        "features": [
+          "Vet-approved essentials",
+          "Clean, safe, and natural formulas",
+          "Promotes holistic well-being",
+          "Clinically proven results"
+        ]
+      },
+      "safety": {
+        "name": "Safety & Protection",
+        "subtitle": "Advanced gear to protect your faithful companion at all times.",
+        "features": [
+          "Certified safety-rated harnesses",
+          "Custom engraved ID plates",
+          "Reflective trim for night safety",
+          "High-impact, durable materials"
+        ]
+      },
+      "entertainment": {
+        "name": "Interactive Entertainment",
+        "subtitle": "Smart toys designed to keep your pet active and mentally sharp.",
+        "features": [
+          "Intelligent interactive toys",
+          "Advanced mental stimulation",
+          "Rigorously tested safe designs",
+          "Solutions for every age and size"
+        ]
+      },
+      "grooming": {
+        "name": "Pro Grooming Essentials",
+        "subtitle": "Professional-grade tools for a clean, healthy, and happy pet.",
+        "features": [
+          "Complete pro grooming kits",
+          "Premium-grade hygiene products",
+          "Professional-standard tools",
+          "Comprehensive, safe care solutions"
+        ]
+      }
+    }
+  },
+  "moreProducts": {
+    "badge": "More to Explore",
+    "title": "Discover our Extended Line",
+    "toys": {
+      "name": "Interactive Playtime",
+      "benefits": [
+        "Mental and physical stimulation",
+        "Durable, pet-safe materials",
+        "Cutting-edge designs",
+        "Perfect for all life stages"
+      ]
+    },
+    "beds": {
+      "name": "Premium Sleep Systems",
+      "benefits": [
+        "Hypoallergenic materials",
+        "Scientific orthopedic support",
+        "Easy-clean technology",
+        "Multiple size options"
+      ]
+    }
+  },
+  "mentalTips": {
+    "badge": "Mental Stimulation",
+    "title": "Mental Stimulation Tips",
+    "subtitle": "Small habits that make a big difference in your pet's well-being.",
+    "hint": "Hover to see the tip",
+    "ctaBtn": "View related product →",
+    "smell": {
+      "ariaLabel": "Scent Tip – hover to see the advice",
+      "category": "Scent",
+      "title": "Activate the foraging instinct",
+      "tag": "Scent · <60 sec",
+      "tip": "Hide snacks inside the toy to trigger their foraging instinct. <strong>5 minutes of scent work equals 20 minutes of walking.</strong>"
+    },
+    "patience": {
+      "ariaLabel": "Patience Tip – hover to see the advice",
+      "category": "Patience",
+      "title": "Focus and relaxation",
+      "tag": "Patience · <60 sec",
+      "tip": "Use the portable water bottle frozen with natural yogurt. <strong>It will keep your pet focused and calm for longer.</strong>"
+    },
+    "agility": {
+      "ariaLabel": "Agility Tip – hover to see the advice",
+      "category": "Agility",
+      "title": "Burn mental energy at home",
+      "tag": "Agility · <60 sec",
+      "tip": "Create a mini circuit at home using the leash as a goal marker. <strong>Strengthens the bond and burns mental energy without leaving the house.</strong>"
+    }
+  },
+  "contact": {
+    "badge": "🐾 Get in Touch",
+    "title": "Have a Question?",
+    "subtitle": "Send us a message and our team will get back to you shortly.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "WhatsApp will open so you can send the message. Thank you for reaching out!",
+      "validation": "Please complete all fields before sending your message.",
+      "subject": "Inquiry from ARGO'S PACK Website"
+    }
+  },
+  "footer": {
+    "tagline": "Premium essentials to make your pet's life more comfortable and joyful.",
+    "links": {
+      "title": "🔗 Quick Links",
+      "home": "🏠 Home",
+      "products": "🦴 Products",
+      "benefits": "✨ Benefits",
+      "testimonials": "💬 Testimonials"
+    },
+    "contact": {
+      "title": "Contact Us"
+    },
+    "legal": {
+      "title": "⚖️ Legal",
+      "privacy": "🛡️ Privacy Policy",
+      "terms": "📜 Terms & Conditions"
+    },
+    "copyright": "© 2024 ARGO'S PACK. All Rights Reserved."
+  },
+  "lightbox": {
+    "close": "Close",
+    "imageAlt": "Full-size view"
+  },
+  "aria": {
+    "toggleMenu": "Toggle navigation menu",
+    "whatsapp": "Chat with us on WhatsApp",
+    "carrierView1": "Main product gallery view",
+    "carrierView2": "Side perspective view",
+    "carrierView3": "Expanded interior view",
+    "carrierView4": "Dimensions and scale view",
+    "carrierView5": "Top-down perspective",
+    "carrierView6": "Detailed feature view"
+  }
+}
+
+
+

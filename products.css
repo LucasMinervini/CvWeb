@@ -1,0 +1,843 @@
+/* ============================================
+   Sección de Productos — Bento Grid
+   ============================================ */
+.products {
+    padding: var(--spacing-2xl) 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(135deg, rgba(13, 40, 24, 0.15) 0%, rgba(10, 15, 11, 0.2) 50%, rgba(13, 40, 24, 0.15) 100%),
+        radial-gradient(ellipse at 30% 30%, rgba(82, 183, 136, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(26, 77, 46, 0.1) 0%, transparent 60%);
+    opacity: 0.6;
+    z-index: 0;
+    animation: heroOverlayPulse 15s ease-in-out infinite;
+    will-change: opacity;
+}
+
+.products::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(82, 183, 136, 0.2) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(82, 183, 136, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 50% 20%, rgba(82, 183, 136, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    animation: heroGlow 12s ease-in-out infinite;
+    will-change: opacity;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    opacity: 0.3;
+}
+
+/* ============================================
+   Bento Grid Layout
+   ============================================ */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr 1fr;
+    grid-template-rows: 270px 270px 190px;
+    grid-template-areas:
+        "hero  feature-1  tall"
+        "hero  feature-2  tall"
+        "stats small      cta";
+    gap: 1rem;
+    margin-top: var(--spacing-xl);
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   Bento Cell — Base
+   ============================================ */
+.bento-cell {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    /* Entrance animation start state */
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.35s ease;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(82, 183, 136, 0.15);
+}
+
+/* Visible state — added by IntersectionObserver */
+.bento-cell.bento-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered entrance delays */
+.bento-cell:nth-child(1) { transition-delay: 0.05s; }
+.bento-cell:nth-child(2) { transition-delay: 0.15s; }
+.bento-cell:nth-child(3) { transition-delay: 0.10s; }
+.bento-cell:nth-child(4) { transition-delay: 0.22s; }
+.bento-cell:nth-child(5) { transition-delay: 0.28s; }
+.bento-cell:nth-child(6) { transition-delay: 0.35s; }
+.bento-cell:nth-child(7) { transition-delay: 0.40s; }
+
+/* Lift + pop on hover */
+.bento-cell:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 28px 64px rgba(0, 0, 0, 0.52),
+        0 10px 28px rgba(82, 183, 136, 0.26),
+        0 0 0 1px rgba(82, 183, 136, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    border-color: rgba(82, 183, 136, 0.42);
+    z-index: 5;
+}
+
+/* Override visible state so hover still works */
+.bento-cell.bento-visible:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* ============================================
+   Grid Area Assignments
+   ============================================ */
+.bento-cell--hero    { grid-area: hero; }
+.bento-cell--feature:nth-of-type(2) { grid-area: feature-1; }
+.bento-cell--feature:nth-of-type(4) { grid-area: feature-2; }
+.bento-cell--tall    { grid-area: tall; }
+.bento-cell--stats   { grid-area: stats; }
+.bento-cell--small   { grid-area: small; }
+.bento-cell--cta     { grid-area: cta; }
+
+/* ============================================
+   Hero Cell
+   ============================================ */
+.bento-cell--hero {
+    background: linear-gradient(160deg, rgba(6, 22, 14, 0.92) 0%, rgba(13, 40, 24, 0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bento-cell__bg-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bento-cell__bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.06);
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.72) saturate(1.15);
+}
+
+.bento-cell--hero:hover .bento-cell__bg-image img {
+    transform: scale(1.12);
+    filter: brightness(0.82) saturate(1.25);
+}
+
+/* Gradient overlay so text stays readable */
+.bento-cell--hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(4, 18, 10, 0.95) 0%,
+        rgba(6, 22, 14, 0.6) 45%,
+        rgba(6, 22, 14, 0.1) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bento-cell--hero .bento-cell__content {
+    position: relative;
+    z-index: 2;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+/* ============================================
+   Feature Cells (medium)
+   ============================================ */
+.bento-cell--feature {
+    background: linear-gradient(160deg, rgba(13, 40, 24, 0.95) 0%, rgba(20, 55, 34, 0.9) 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+}
+
+.bento-cell__media {
+    position: relative;
+    width: 46%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.bento-cell__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.08);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.88) saturate(1.1);
+}
+
+.bento-cell--feature:hover .bento-cell__media img {
+    transform: scale(1.14);
+    filter: brightness(0.96) saturate(1.2);
+}
+
+/* Right-side fade from image into content */
+.bento-cell__media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(13, 40, 24, 0.95));
+    pointer-events: none;
+}
+
+.bento-cell--feature .bento-cell__content {
+    flex: 1;
+    padding: 1.1rem 1.1rem 1.1rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+/* ============================================
+   Tall Cell (Pet Cup — spans 2 rows)
+   ============================================ */
+.bento-cell--tall {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bento-cell__media--tall {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bento-cell__media--tall img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.06);
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.75) saturate(1.15);
+}
+
+.bento-cell--tall:hover .bento-cell__media--tall img {
+    transform: scale(1.12);
+}
+
+.bento-cell--tall::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(4, 18, 10, 0.96) 0%,
+        rgba(6, 22, 14, 0.55) 50%,
+        rgba(6, 22, 14, 0.05) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bento-cell--tall .bento-cell__content {
+    position: relative;
+    z-index: 2;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+/* ============================================
+   Glassmorphism modifier
+   ============================================ */
+.bento-cell--glass {
+    background: rgba(12, 30, 20, 0.28) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-color: rgba(82, 183, 136, 0.22) !important;
+}
+
+.bento-cell--glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================
+   Stats Cell
+   ============================================ */
+.bento-cell--stats {
+    background: linear-gradient(135deg, rgba(13, 40, 24, 0.96) 0%, rgba(26, 60, 38, 0.92) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    overflow: hidden;
+}
+
+.bento-cell--stats::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(82, 183, 136, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.bento-cell--stats:hover {
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   Promise Carousel
+   ============================================ */
+.promise-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promise-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem 2.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.promise-slide--active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.promise-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #78efbc;
+    margin-bottom: 0.3rem;
+    filter: drop-shadow(0 0 10px rgba(120, 239, 188, 0.4));
+    flex-shrink: 0;
+}
+
+.promise-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.promise-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.promise-desc {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    max-width: 22ch;
+    margin: 0;
+}
+
+.promise-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+}
+
+.promise-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(120, 239, 188, 0.25);
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+
+.promise-dot--active {
+    background: #78efbc;
+    transform: scale(1.3);
+}
+
+/* ============================================
+   Small Cell (Pinza)
+   ============================================ */
+.bento-cell--small {
+    background: linear-gradient(160deg, rgba(13, 40, 24, 0.96) 0%, rgba(20, 55, 34, 0.92) 100%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bento-cell--small .bento-cell__media {
+    width: 100%;
+    height: 55%;
+    flex-shrink: 0;
+}
+
+.bento-cell--small .bento-cell__media::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(13, 40, 24, 0.9), transparent);
+    width: 100%;
+}
+
+.bento-cell--small .bento-cell__content {
+    flex: 1;
+    padding: 0.8rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    justify-content: flex-end;
+}
+
+/* ============================================
+   CTA Cell
+   ============================================ */
+.bento-cell--cta {
+    background: linear-gradient(135deg, rgba(26, 60, 38, 0.9) 0%, rgba(13, 40, 24, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle animated glow background */
+.bento-cell--cta::before {
+    content: '';
+    position: absolute;
+    inset: -30%;
+    background: radial-gradient(circle, rgba(82, 183, 136, 0.14) 0%, transparent 70%);
+    animation: ctaGlow 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ctaGlow {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50%       { transform: scale(1.15); opacity: 1; }
+}
+
+.bento-cell__content--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem;
+}
+
+.bento-cta-headline {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+/* ============================================
+   Shared Content Typography
+   ============================================ */
+.bento-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.7rem;
+    background: rgba(112, 214, 165, 0.75);
+    color: rgba(4, 22, 14, 0.92);
+    font-size: 0.56rem;
+    font-weight: 800;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: fit-content;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bento-cell:hover .bento-chip {
+    background: rgba(124, 224, 176, 0.88);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(82, 183, 136, 0.3);
+}
+
+.bento-cell__title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.bento-cell--hero .bento-cell__title {
+    font-size: 1.55rem;
+    letter-spacing: -0.03em;
+}
+
+.bento-cell__desc {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.bento-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.bento-features li {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.78);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.4;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bento-features li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0.02em;
+    color: #74e9b8;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(82, 183, 136, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.bento-cell:hover .bento-features li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.bento-cell:hover .bento-features li::before {
+    transform: scale(1.15);
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.bento-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    text-decoration: none;
+}
+
+/* Shimmer sweep on hover */
+.bento-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+    transition: left 0.55s ease;
+}
+
+.bento-btn:hover::before {
+    left: 100%;
+}
+
+/* Primary — large hero button */
+.bento-btn--primary {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.72rem;
+    background: linear-gradient(135deg, rgba(112, 224, 174, 0.95) 0%, rgba(89, 205, 156, 0.92) 100%);
+    color: rgba(4, 22, 14, 0.92);
+    border: 1px solid rgba(130, 230, 186, 0.3);
+    box-shadow: 0 10px 28px rgba(60, 154, 115, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.bento-btn--primary:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(116, 224, 176, 1) 0%, rgba(94, 204, 159, 0.98) 100%);
+    box-shadow: 0 16px 36px rgba(82, 183, 136, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+/* Small — compact card button */
+.bento-btn--sm {
+    padding: 0.6rem 1rem;
+    font-size: 0.6rem;
+    background: rgba(82, 183, 136, 0.14);
+    color: #78efbc;
+    border: 1px solid rgba(82, 183, 136, 0.3);
+    margin-top: auto;
+}
+
+.bento-btn--sm:hover {
+    background: rgba(82, 183, 136, 0.24);
+    border-color: rgba(82, 183, 136, 0.55);
+    color: #a0f5d0;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(82, 183, 136, 0.2);
+}
+
+/* Gradient — CTA block button with dynamic glow */
+.bento-btn--gradient {
+    padding: 0.85rem 1.6rem;
+    font-size: 0.7rem;
+    background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
+    color: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(82, 183, 136, 0.35);
+    box-shadow: 0 8px 24px rgba(82, 183, 136, 0.25);
+    background-size: 200% 200%;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1), background-position 0.5s ease;
+    background-position: 0% 50%;
+}
+
+.bento-btn--gradient:hover {
+    background-position: 100% 50%;
+    background: linear-gradient(135deg, #74e9b8 0%, #52b788 100%);
+    color: rgba(4, 22, 14, 0.95);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 14px 36px rgba(82, 183, 136, 0.45), 0 0 0 2px rgba(82, 183, 136, 0.2);
+}
+
+/* ============================================
+   Responsive — Tablet (768px)
+   ============================================ */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 220px 220px 180px;
+        grid-template-areas:
+            "hero   hero"
+            "tall   feature-1"
+            "tall   feature-2"
+            "stats  stats"
+            "small  cta";
+        row-gap: 0.85rem;
+    }
+
+    .bento-cell--hero .bento-cell__title {
+        font-size: 1.3rem;
+    }
+
+    .bento-cell--feature {
+        flex-direction: column;
+    }
+
+    .bento-cell__media {
+        width: 100%;
+        height: 50%;
+    }
+
+    .bento-cell--feature .bento-cell__content {
+        padding: 0.85rem;
+    }
+
+    .bento-cell--feature .bento-cell__media::after {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 45%;
+        background: linear-gradient(to top, rgba(13, 40, 24, 0.95), transparent);
+    }
+}
+
+/* ============================================
+   Responsive — Mobile (480px)
+   ============================================ */
+@media (max-width: 600px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 340px 300px 280px 280px 160px 260px 160px;
+        grid-template-areas:
+            "hero"
+            "tall"
+            "feature-1"
+            "feature-2"
+            "stats"
+            "small"
+            "cta";
+        gap: 0.75rem;
+    }
+
+    .bento-cell--feature {
+        flex-direction: row;
+    }
+
+    .bento-cell__media {
+        width: 42%;
+        height: 100%;
+    }
+
+    .bento-cell--feature .bento-cell__media::after {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: 45%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, rgba(13, 40, 24, 0.95));
+    }
+
+    .bento-cell--feature .bento-cell__content {
+        padding: 1rem 1rem 1rem 0.5rem;
+    }
+
+    .promise-title {
+        font-size: 1.1rem;
+    }
+
+    .promise-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .bento-cell--hero .bento-cell__title {
+        font-size: 1.2rem;
+    }
+}
+
+/* ============================================
+   Bento Price Badge
+   ============================================ */
+.bento-price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(10, 36, 24, 0.96) 0%, rgba(8, 28, 18, 0.98) 100%);
+    border: 1px solid rgba(105, 197, 158, 0.18);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 18px rgba(0, 0, 0, 0.18);
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.bento-price--sm {
+    padding: 0.4rem 0.75rem;
+}
+
+.bento-price__currency {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: rgba(228, 245, 237, 0.78);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.bento-price--sm .bento-price__currency {
+    font-size: 0.62rem;
+}
+
+.bento-price__amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #78efbc;
+    line-height: 1;
+    text-shadow: 0 0 14px rgba(82, 183, 136, 0.22);
+    font-variant-numeric: tabular-nums;
+}
+
+.bento-price--sm .bento-price__amount {
+    font-size: 1.15rem;
+}
+
+.bento-price__source {
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.22rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(255, 153, 0, 0.14);
+    color: #ff9900;
+    border: 1px solid rgba(255, 153, 0, 0.22);
+    align-self: center;
+    margin-left: 0.2rem;
+}

@@ -1,0 +1,37 @@
+/* ============================================
+   Lazy Loading para Imágenes
+   ============================================ */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* ============================================
+   Unified Section Look (soft transitions)
+   ============================================ */
+
+/* Usar el mismo padding vertical para que no se perciban "bloques" aislados */
+.hero,
+.benefits,
+.products,
+.more-products {
+    padding: var(--spacing-2xl) 0;
+}
+
+/* Desactivar los overlays específicos de cada sección para que el fondo animado sea continuo */
+.benefits::before,
+.benefits::after,
+.products::before,
+.products::after,
+.more-products::before,
+.more-products::after {
+    content: none;
+    background: none !important;
+    opacity: 0 !important;
+    animation: none !important;
+}
+

@@ -1,0 +1,59 @@
+/* ============================================
+   Variables CSS - Paleta de Colores ARGO'S PACK
+   ============================================ */
+:root {
+    /* Colores Primarios */
+    --color-primary-dark: #0d2818; /* Verde muy oscuro */
+    --color-primary: #1a4d2e; /* Verde oscuro de marca */
+    --color-primary-medium: #2d6a4f; /* Verde medio */
+    --color-primary-light: #52b788; /* Verde claro */
+    
+    /* Colores Neutros */
+    --color-dark: #0a0f0b; /* Negro/Verde muy oscuro */
+    --color-white: #ffffff;
+    --color-light: #f8f9fa;
+    --color-gray: #adb5bd;
+    --color-gray-light: #e9ecef;
+    --color-gray-dark: #495057;
+    
+    /* Colores de Acento */
+    --color-accent: #52b788; /* Verde acento brillante */
+    --color-accent-hover: #40916c;
+    --color-accent-light: #95d5b2;
+    
+    /* Tipografía */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2.5rem;
+    --font-size-4xl: 3.5rem;
+    --font-size-5xl: 4.5rem;
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    
+    /* Transiciones */
+    --transition-base: 0.3s ease;
+    --transition-fast: 0.15s ease;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    
+    /* Bordes */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
+}
+
